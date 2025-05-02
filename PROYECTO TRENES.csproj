@@ -46,14 +46,89 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="FormInicioSesion.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="FormInicioSesion.Designer.cs">
+      <DependentUpon>FormInicioSesion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modulo Usuarios\FormBoletosComprados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulo Usuarios\FormBoletosComprados.Designer.cs">
+      <DependentUpon>FormBoletosComprados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modulo Usuarios\FormConfirmacionCambioRuta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulo Usuarios\FormConfirmacionCambioRuta.Designer.cs">
+      <DependentUpon>FormConfirmacionCambioRuta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modulo Usuarios\FormDetallesBoletoComprado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulo Usuarios\FormDetallesBoletoComprado.Designer.cs">
+      <DependentUpon>FormDetallesBoletoComprado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modulo Usuarios\FormModificarRuta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulo Usuarios\FormModificarRuta.Designer.cs">
+      <DependentUpon>FormModificarRuta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modulo Usuarios\FormResumenBoleto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulo Usuarios\FormResumenBoleto.Designer.cs">
+      <DependentUpon>FormResumenBoleto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modulo Usuarios\FormMenuUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulo Usuarios\FormMenuUsuario.Designer.cs">
+      <DependentUpon>FormMenuUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modulo Usuarios\FormRellenarDatosBoleto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulo Usuarios\FormRellenarDatosBoleto.Designer.cs">
+      <DependentUpon>FormRellenarDatosBoleto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modulo Usuarios\FormSeleccionarRuta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulo Usuarios\FormSeleccionarRuta.Designer.cs">
+      <DependentUpon>FormSeleccionarRuta.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormInicioSesion.resx">
+      <DependentUpon>FormInicioSesion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulo Usuarios\FormBoletosComprados.resx">
+      <DependentUpon>FormBoletosComprados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulo Usuarios\FormConfirmacionCambioRuta.resx">
+      <DependentUpon>FormConfirmacionCambioRuta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulo Usuarios\FormDetallesBoletoComprado.resx">
+      <DependentUpon>FormDetallesBoletoComprado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulo Usuarios\FormModificarRuta.resx">
+      <DependentUpon>FormModificarRuta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulo Usuarios\FormResumenBoleto.resx">
+      <DependentUpon>FormResumenBoleto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulo Usuarios\FormMenuUsuario.resx">
+      <DependentUpon>FormMenuUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulo Usuarios\FormRellenarDatosBoleto.resx">
+      <DependentUpon>FormRellenarDatosBoleto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulo Usuarios\FormSeleccionarRuta.resx">
+      <DependentUpon>FormSeleccionarRuta.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -75,6 +150,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Modulo inicio de sesion y registro\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
