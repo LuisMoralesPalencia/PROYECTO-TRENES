@@ -46,6 +46,126 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Modulo Empleado\agregarrutaForm1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulo Empleado\agregarrutaForm1.Designer.cs">
+      <DependentUpon>agregarrutaForm1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modulo Empleado\agregartrenForm1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulo Empleado\agregartrenForm1.Designer.cs">
+      <DependentUpon>agregartrenForm1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modulo Empleado\agregarvagonForm1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulo Empleado\agregarvagonForm1.Designer.cs">
+      <DependentUpon>agregarvagonForm1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modulo Empleado\buscartrenForm1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulo Empleado\buscartrenForm1.Designer.cs">
+      <DependentUpon>buscartrenForm1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modulo Empleado\buscarutaForm1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulo Empleado\buscarutaForm1.Designer.cs">
+      <DependentUpon>buscarutaForm1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modulo Empleado\buscarvagonForm1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulo Empleado\buscarvagonForm1.Designer.cs">
+      <DependentUpon>buscarvagonForm1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modulo Empleado\confirmarmodificaciontrenForm1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulo Empleado\confirmarmodificaciontrenForm1.Designer.cs">
+      <DependentUpon>confirmarmodificaciontrenForm1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modulo Empleado\confirmarmodificarrutaForm1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulo Empleado\confirmarmodificarrutaForm1.Designer.cs">
+      <DependentUpon>confirmarmodificarrutaForm1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modulo Empleado\ControlEquipajeForm1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulo Empleado\ControlEquipajeForm1.Designer.cs">
+      <DependentUpon>ControlEquipajeForm1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modulo Empleado\desembarqueForm1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulo Empleado\desembarqueForm1.Designer.cs">
+      <DependentUpon>desembarqueForm1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modulo Empleado\eliminarrutaForm1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulo Empleado\eliminarrutaForm1.Designer.cs">
+      <DependentUpon>eliminarrutaForm1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modulo Empleado\eliminartrenForm1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulo Empleado\eliminartrenForm1.Designer.cs">
+      <DependentUpon>eliminartrenForm1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modulo Empleado\eliminarvagonForm1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulo Empleado\eliminarvagonForm1.Designer.cs">
+      <DependentUpon>eliminarvagonForm1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modulo Empleado\embarqueForm1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulo Empleado\embarqueForm1.Designer.cs">
+      <DependentUpon>embarqueForm1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modulo Empleado\modificarrutaForm1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulo Empleado\modificarrutaForm1.Designer.cs">
+      <DependentUpon>modificarrutaForm1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modulo Empleado\modificartrenForm1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulo Empleado\modificartrenForm1.Designer.cs">
+      <DependentUpon>modificartrenForm1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modulo Empleado\mostrarvagonesForm1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulo Empleado\mostrarvagonesForm1.Designer.cs">
+      <DependentUpon>mostrarvagonesForm1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modulo Empleado\protocoloAbordajeForm1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulo Empleado\protocoloAbordajeForm1.Designer.cs">
+      <DependentUpon>protocoloAbordajeForm1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modulo Empleado\validarBoletoForm1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulo Empleado\validarBoletoForm1.Designer.cs">
+      <DependentUpon>validarBoletoForm1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modulo Empleado\MenuPrincipalForm1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulo Empleado\MenuPrincipalForm1.Designer.cs">
+      <DependentUpon>MenuPrincipalForm1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Modulo Usuarios\FormBoletosComprados.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -96,6 +216,66 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Modulo Empleado\agregarrutaForm1.resx">
+      <DependentUpon>agregarrutaForm1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulo Empleado\agregartrenForm1.resx">
+      <DependentUpon>agregartrenForm1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulo Empleado\agregarvagonForm1.resx">
+      <DependentUpon>agregarvagonForm1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulo Empleado\buscartrenForm1.resx">
+      <DependentUpon>buscartrenForm1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulo Empleado\buscarutaForm1.resx">
+      <DependentUpon>buscarutaForm1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulo Empleado\buscarvagonForm1.resx">
+      <DependentUpon>buscarvagonForm1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulo Empleado\confirmarmodificaciontrenForm1.resx">
+      <DependentUpon>confirmarmodificaciontrenForm1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulo Empleado\confirmarmodificarrutaForm1.resx">
+      <DependentUpon>confirmarmodificarrutaForm1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulo Empleado\ControlEquipajeForm1.resx">
+      <DependentUpon>ControlEquipajeForm1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulo Empleado\desembarqueForm1.resx">
+      <DependentUpon>desembarqueForm1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulo Empleado\eliminarrutaForm1.resx">
+      <DependentUpon>eliminarrutaForm1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulo Empleado\eliminartrenForm1.resx">
+      <DependentUpon>eliminartrenForm1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulo Empleado\eliminarvagonForm1.resx">
+      <DependentUpon>eliminarvagonForm1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulo Empleado\embarqueForm1.resx">
+      <DependentUpon>embarqueForm1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulo Empleado\modificarrutaForm1.resx">
+      <DependentUpon>modificarrutaForm1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulo Empleado\modificartrenForm1.resx">
+      <DependentUpon>modificartrenForm1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulo Empleado\mostrarvagonesForm1.resx">
+      <DependentUpon>mostrarvagonesForm1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulo Empleado\protocoloAbordajeForm1.resx">
+      <DependentUpon>protocoloAbordajeForm1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulo Empleado\validarBoletoForm1.resx">
+      <DependentUpon>validarBoletoForm1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulo Empleado\MenuPrincipalForm1.resx">
+      <DependentUpon>MenuPrincipalForm1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Modulo Usuarios\FormBoletosComprados.resx">
       <DependentUpon>FormBoletosComprados.cs</DependentUpon>
     </EmbeddedResource>
