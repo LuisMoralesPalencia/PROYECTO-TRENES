@@ -49,7 +49,11 @@
     <Compile Include="Códigos\Administrador.cs" />
     <Compile Include="Códigos\Empleado.cs" />
     <Compile Include="Códigos\Pasajero.cs" />
+    <Compile Include="Códigos\SistemaAutenticacion.cs" />
+    <Compile Include="Códigos\UserInfo.cs" />
     <Compile Include="Códigos\Usuario.cs" />
+    <Compile Include="Datos.cs" />
+    <Compile Include="Estructuras de datos\TablaHash.cs" />
     <Compile Include="InicioYRegistro\FormInicioSesion.cs">
       <SubType>Form</SubType>
     </Compile>
