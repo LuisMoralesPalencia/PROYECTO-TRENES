@@ -46,6 +46,35 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Modulo administrador\FormAgregarEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulo administrador\FormAgregarEmpleado.Designer.cs">
+      <DependentUpon>FormAgregarEmpleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modulo administrador\FormBuscarUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulo administrador\FormBuscarUsuarios.Designer.cs">
+      <DependentUpon>FormBuscarUsuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modulo administrador\FormEliminarUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulo administrador\FormEliminarUsuario.Designer.cs">
+      <DependentUpon>FormEliminarUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modulo administrador\FormMenuAdministrador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulo administrador\FormMenuAdministrador.Designer.cs">
+      <DependentUpon>FormMenuAdministrador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modulo administrador\FormModificarUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulo administrador\FormModificarUsuario.Designer.cs">
+      <DependentUpon>FormModificarUsuario.cs</DependentUpon>
     <Compile Include="Modulo Empleado\agregarrutaForm1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -216,6 +245,20 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Modulo administrador\FormAgregarEmpleado.resx">
+      <DependentUpon>FormAgregarEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulo administrador\FormBuscarUsuarios.resx">
+      <DependentUpon>FormBuscarUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulo administrador\FormEliminarUsuario.resx">
+      <DependentUpon>FormEliminarUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulo administrador\FormMenuAdministrador.resx">
+      <DependentUpon>FormMenuAdministrador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulo administrador\FormModificarUsuario.resx">
+      <DependentUpon>FormModificarUsuario.cs</DependentUpon>
     <EmbeddedResource Include="Modulo Empleado\agregarrutaForm1.resx">
       <DependentUpon>agregarrutaForm1.cs</DependentUpon>
     </EmbeddedResource>
