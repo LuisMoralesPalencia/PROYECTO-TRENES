@@ -75,6 +75,7 @@
     </Compile>
     <Compile Include="Modulo administrador\FormModificarUsuario.Designer.cs">
       <DependentUpon>FormModificarUsuario.cs</DependentUpon>
+	</Compile>
     <Compile Include="Modulo Empleado\agregarrutaForm1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -258,7 +259,8 @@
       <DependentUpon>FormMenuAdministrador.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Modulo administrador\FormModificarUsuario.resx">
-      <DependentUpon>FormModificarUsuario.cs</DependentUpon>
+		<DependentUpon>FormModificarUsuario.cs</DependentUpon>
+	</EmbeddedResource>
     <EmbeddedResource Include="Modulo Empleado\agregarrutaForm1.resx">
       <DependentUpon>agregarrutaForm1.cs</DependentUpon>
     </EmbeddedResource>
