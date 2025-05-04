@@ -226,11 +226,6 @@
     <Compile Include="Modulo Usuarios\FormSeleccionarRuta.Designer.cs">
       <DependentUpon>FormSeleccionarRuta.cs</DependentUpon>
     </Compile>
-    <Compile Include="Objetos\Tren\ClassMercedes.cs" />
-    <Compile Include="Objetos\Tren\ClassTren.cs" />
-    <Compile Include="Objetos\Usuarios\ClassEmpleado.cs" />
-    <Compile Include="Objetos\Usuarios\ClassPasajero.cs" />
-    <Compile Include="Objetos\Usuarios\ClassUsuario.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="InicioYRegistro\FormInicioSesion.resx">
