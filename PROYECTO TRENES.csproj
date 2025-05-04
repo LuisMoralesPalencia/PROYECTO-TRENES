@@ -46,6 +46,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="InicioYRegistro\FormInicioSesion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InicioYRegistro\FormInicioSesion.Designer.cs">
+      <DependentUpon>FormInicioSesion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InicioYRegistro\FormRegistrarse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InicioYRegistro\FormRegistrarse.Designer.cs">
+      <DependentUpon>FormRegistrarse.cs</DependentUpon>
+    </Compile>
     <Compile Include="Modulo Empleado\agregarrutaForm1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -214,8 +226,19 @@
     <Compile Include="Modulo Usuarios\FormSeleccionarRuta.Designer.cs">
       <DependentUpon>FormSeleccionarRuta.cs</DependentUpon>
     </Compile>
+    <Compile Include="Objetos\Tren\ClassMercedes.cs" />
+    <Compile Include="Objetos\Tren\ClassTren.cs" />
+    <Compile Include="Objetos\Usuarios\ClassEmpleado.cs" />
+    <Compile Include="Objetos\Usuarios\ClassPasajero.cs" />
+    <Compile Include="Objetos\Usuarios\ClassUsuario.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="InicioYRegistro\FormInicioSesion.resx">
+      <DependentUpon>FormInicioSesion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InicioYRegistro\FormRegistrarse.resx">
+      <DependentUpon>FormRegistrarse.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Modulo Empleado\agregarrutaForm1.resx">
       <DependentUpon>agregarrutaForm1.cs</DependentUpon>
     </EmbeddedResource>

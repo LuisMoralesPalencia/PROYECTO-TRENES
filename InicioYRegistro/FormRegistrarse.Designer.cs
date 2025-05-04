@@ -30,6 +30,7 @@
         {
             this.label4 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.linkLabelSiTengoCuenta = new System.Windows.Forms.LinkLabel();
             this.buttonSalir = new System.Windows.Forms.Button();
             this.buttonRegistrarse = new System.Windows.Forms.Button();
             this.textBoxContraseñaRegistro = new System.Windows.Forms.TextBox();
@@ -37,7 +38,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.linkLabelSiTengoCuenta = new System.Windows.Forms.LinkLabel();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -45,7 +45,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 24.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(448, 74);
+            this.label4.Location = new System.Drawing.Point(456, 74);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(209, 48);
@@ -69,6 +69,17 @@
             this.panel1.Size = new System.Drawing.Size(553, 454);
             this.panel1.TabIndex = 16;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // linkLabelSiTengoCuenta
+            // 
+            this.linkLabelSiTengoCuenta.AutoSize = true;
+            this.linkLabelSiTengoCuenta.Location = new System.Drawing.Point(212, 284);
+            this.linkLabelSiTengoCuenta.Name = "linkLabelSiTengoCuenta";
+            this.linkLabelSiTengoCuenta.Size = new System.Drawing.Size(129, 16);
+            this.linkLabelSiTengoCuenta.TabIndex = 15;
+            this.linkLabelSiTengoCuenta.TabStop = true;
+            this.linkLabelSiTengoCuenta.Text = "Ya tengo una cuenta";
+            this.linkLabelSiTengoCuenta.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LinkLabelSiTengoCuenta_LinkClicked);
             // 
             // buttonSalir
             // 
@@ -145,17 +156,6 @@
             this.label1.Size = new System.Drawing.Size(137, 32);
             this.label1.TabIndex = 8;
             this.label1.Text = "Registrarse";
-            // 
-            // linkLabelSiTengoCuenta
-            // 
-            this.linkLabelSiTengoCuenta.AutoSize = true;
-            this.linkLabelSiTengoCuenta.Location = new System.Drawing.Point(212, 284);
-            this.linkLabelSiTengoCuenta.Name = "linkLabelSiTengoCuenta";
-            this.linkLabelSiTengoCuenta.Size = new System.Drawing.Size(129, 16);
-            this.linkLabelSiTengoCuenta.TabIndex = 15;
-            this.linkLabelSiTengoCuenta.TabStop = true;
-            this.linkLabelSiTengoCuenta.Text = "Ya tengo una cuenta";
-            this.linkLabelSiTengoCuenta.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LinkLabelSiTengoCuenta_LinkClicked);
             // 
             // FormRegistrarse
             // 
