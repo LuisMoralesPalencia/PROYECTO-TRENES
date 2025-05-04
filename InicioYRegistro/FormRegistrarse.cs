@@ -29,7 +29,7 @@ namespace PROYECTO_TRENES.InicioYRegistro
 
         private void buttonSalir_Click(object sender, EventArgs e)
         {
-
+            Application.Exit();
         }
 
         private void textBoxCorreoRegistro_TextChanged(object sender, EventArgs e)
@@ -49,7 +49,9 @@ namespace PROYECTO_TRENES.InicioYRegistro
 
         private void LinkLabelSiTengoCuenta_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-
+            FormInicioSesion formInicioSesion = new FormInicioSesion();
+            formInicioSesion.Show();
+            this.Hide();
         }
     }
 }

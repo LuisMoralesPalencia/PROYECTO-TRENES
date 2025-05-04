@@ -46,6 +46,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Códigos\Administrador.cs" />
+    <Compile Include="Códigos\Empleado.cs" />
+    <Compile Include="Códigos\Pasajero.cs" />
+    <Compile Include="Códigos\Usuario.cs" />
     <Compile Include="InicioYRegistro\FormInicioSesion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -87,7 +91,7 @@
     </Compile>
     <Compile Include="Modulo administrador\FormModificarUsuario.Designer.cs">
       <DependentUpon>FormModificarUsuario.cs</DependentUpon>
-	</Compile>
+    </Compile>
     <Compile Include="Modulo Empleado\agregarrutaForm1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -277,8 +281,8 @@
       <DependentUpon>FormMenuAdministrador.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Modulo administrador\FormModificarUsuario.resx">
-		<DependentUpon>FormModificarUsuario.cs</DependentUpon>
-	</EmbeddedResource>
+      <DependentUpon>FormModificarUsuario.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Modulo Empleado\agregarrutaForm1.resx">
       <DependentUpon>agregarrutaForm1.cs</DependentUpon>
     </EmbeddedResource>

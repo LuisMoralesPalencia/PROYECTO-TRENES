@@ -45,10 +45,9 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 24.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(456, 74);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(342, 60);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(209, 48);
+            this.label4.Size = new System.Drawing.Size(166, 38);
             this.label4.TabIndex = 17;
             this.label4.Text = "TransRail";
             // 
@@ -63,19 +62,19 @@
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(284, 126);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4);
+            this.panel1.Location = new System.Drawing.Point(213, 102);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(553, 454);
+            this.panel1.Size = new System.Drawing.Size(415, 369);
             this.panel1.TabIndex = 16;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // linkLabelSiTengoCuenta
             // 
             this.linkLabelSiTengoCuenta.AutoSize = true;
-            this.linkLabelSiTengoCuenta.Location = new System.Drawing.Point(212, 284);
+            this.linkLabelSiTengoCuenta.Location = new System.Drawing.Point(159, 231);
+            this.linkLabelSiTengoCuenta.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.linkLabelSiTengoCuenta.Name = "linkLabelSiTengoCuenta";
-            this.linkLabelSiTengoCuenta.Size = new System.Drawing.Size(129, 16);
+            this.linkLabelSiTengoCuenta.Size = new System.Drawing.Size(107, 13);
             this.linkLabelSiTengoCuenta.TabIndex = 15;
             this.linkLabelSiTengoCuenta.TabStop = true;
             this.linkLabelSiTengoCuenta.Text = "Ya tengo una cuenta";
@@ -83,10 +82,9 @@
             // 
             // buttonSalir
             // 
-            this.buttonSalir.Location = new System.Drawing.Point(16, 13);
-            this.buttonSalir.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonSalir.Location = new System.Drawing.Point(12, 11);
             this.buttonSalir.Name = "buttonSalir";
-            this.buttonSalir.Size = new System.Drawing.Size(100, 28);
+            this.buttonSalir.Size = new System.Drawing.Size(75, 23);
             this.buttonSalir.TabIndex = 14;
             this.buttonSalir.Text = "Salir";
             this.buttonSalir.UseVisualStyleBackColor = true;
@@ -96,10 +94,9 @@
             // 
             this.buttonRegistrarse.BackColor = System.Drawing.Color.GreenYellow;
             this.buttonRegistrarse.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonRegistrarse.Location = new System.Drawing.Point(84, 329);
-            this.buttonRegistrarse.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonRegistrarse.Location = new System.Drawing.Point(63, 267);
             this.buttonRegistrarse.Name = "buttonRegistrarse";
-            this.buttonRegistrarse.Size = new System.Drawing.Size(387, 28);
+            this.buttonRegistrarse.Size = new System.Drawing.Size(290, 33);
             this.buttonRegistrarse.TabIndex = 13;
             this.buttonRegistrarse.Text = "Registrarse";
             this.buttonRegistrarse.UseVisualStyleBackColor = false;
@@ -107,19 +104,17 @@
             // 
             // textBoxContraseñaRegistro
             // 
-            this.textBoxContraseñaRegistro.Location = new System.Drawing.Point(87, 242);
-            this.textBoxContraseñaRegistro.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxContraseñaRegistro.Location = new System.Drawing.Point(65, 197);
             this.textBoxContraseñaRegistro.Name = "textBoxContraseñaRegistro";
-            this.textBoxContraseñaRegistro.Size = new System.Drawing.Size(384, 22);
+            this.textBoxContraseñaRegistro.Size = new System.Drawing.Size(289, 20);
             this.textBoxContraseñaRegistro.TabIndex = 12;
             this.textBoxContraseñaRegistro.TextChanged += new System.EventHandler(this.textBoxContraseñaRegistro_TextChanged);
             // 
             // textBoxCorreoRegistro
             // 
-            this.textBoxCorreoRegistro.Location = new System.Drawing.Point(87, 148);
-            this.textBoxCorreoRegistro.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxCorreoRegistro.Location = new System.Drawing.Point(65, 120);
             this.textBoxCorreoRegistro.Name = "textBoxCorreoRegistro";
-            this.textBoxCorreoRegistro.Size = new System.Drawing.Size(384, 22);
+            this.textBoxCorreoRegistro.Size = new System.Drawing.Size(289, 20);
             this.textBoxCorreoRegistro.TabIndex = 11;
             this.textBoxCorreoRegistro.TextChanged += new System.EventHandler(this.textBoxCorreoRegistro_TextChanged);
             // 
@@ -127,10 +122,9 @@
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.SystemColors.Control;
-            this.label3.Location = new System.Drawing.Point(84, 222);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(63, 180);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(76, 16);
+            this.label3.Size = new System.Drawing.Size(61, 13);
             this.label3.TabIndex = 10;
             this.label3.Text = "Contraseña";
             // 
@@ -138,33 +132,32 @@
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.SystemColors.Control;
-            this.label2.Location = new System.Drawing.Point(84, 128);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(63, 104);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(48, 16);
+            this.label2.Size = new System.Drawing.Size(96, 13);
             this.label2.TabIndex = 9;
-            this.label2.Text = "Correo";
+            this.label2.Text = "Nombre de usuario";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.SystemColors.Control;
             this.label1.Font = new System.Drawing.Font("Microsoft PhagsPa", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(209, 68);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(157, 55);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(137, 32);
+            this.label1.Size = new System.Drawing.Size(108, 26);
             this.label1.TabIndex = 8;
             this.label1.Text = "Registrarse";
             // 
             // FormRegistrarse
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(1112, 671);
+            this.ClientSize = new System.Drawing.Size(834, 545);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.panel1);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormRegistrarse";
             this.Text = "Registrarse";
             this.Load += new System.EventHandler(this.FormRegistrarse_Load);

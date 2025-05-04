@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using PROYECTO_TRENES.InicioYRegistro;
 using PROYECTO_TRENES.Modulo_Usuarios;
 
 namespace PROYECTO_TRENES
@@ -17,7 +18,7 @@ namespace PROYECTO_TRENES
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormMenuUsuario());
+            Application.Run(new FormInicioSesion());
         }
     }
 }

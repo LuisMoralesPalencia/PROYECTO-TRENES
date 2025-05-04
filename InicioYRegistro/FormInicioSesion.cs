@@ -44,12 +44,14 @@ namespace PROYECTO_TRENES.InicioYRegistro
 
         private void buttonSalir_Click(object sender, EventArgs e)
         {
-
+            Application.Exit();
         }
 
         private void linkLabelRegistrarse_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-
+            FormRegistrarse formRegistrarse = new FormRegistrarse();
+            formRegistrarse.Show();
+            this.Hide();
         }
     }
 }
