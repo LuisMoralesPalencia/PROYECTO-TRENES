@@ -46,6 +46,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="InicioYRegistro\FormInicioSesion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InicioYRegistro\FormInicioSesion.Designer.cs">
+      <DependentUpon>FormInicioSesion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InicioYRegistro\FormRegistrarse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InicioYRegistro\FormRegistrarse.Designer.cs">
+      <DependentUpon>FormRegistrarse.cs</DependentUpon>
+    </Compile>
     <Compile Include="Modulo administrador\FormAgregarEmpleado.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -246,6 +258,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="InicioYRegistro\FormInicioSesion.resx">
+      <DependentUpon>FormInicioSesion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InicioYRegistro\FormRegistrarse.resx">
+      <DependentUpon>FormRegistrarse.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Modulo administrador\FormAgregarEmpleado.resx">
       <DependentUpon>FormAgregarEmpleado.cs</DependentUpon>
     </EmbeddedResource>
