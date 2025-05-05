@@ -66,6 +66,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(552, 398);
             this.panel1.TabIndex = 15;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // button1
             // 
@@ -94,6 +95,7 @@
             this.button2.TabIndex = 9;
             this.button2.Text = "Buscar";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // textBox2
             // 

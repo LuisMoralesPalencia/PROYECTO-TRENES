@@ -59,6 +59,7 @@
             this.button3.TabIndex = 48;
             this.button3.Text = "Ir a modificar";
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // textBox2
             // 
@@ -82,6 +83,7 @@
             this.button2.TabIndex = 45;
             this.button2.Text = "Buscar";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // label3
             // 
@@ -112,6 +114,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(504, 383);
             this.panel1.TabIndex = 50;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // label1
             // 
@@ -160,6 +163,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "modificartrenForm1";
             this.Text = "modificartrenForm1";
+            this.Load += new System.EventHandler(this.modificartrenForm1_Load_1);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);

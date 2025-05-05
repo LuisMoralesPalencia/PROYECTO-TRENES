@@ -65,9 +65,10 @@
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label8);
-            this.panel1.Location = new System.Drawing.Point(69, 38);
+            this.panel1.Location = new System.Drawing.Point(52, 31);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(973, 545);
+            this.panel1.Size = new System.Drawing.Size(730, 443);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -75,10 +76,10 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(60, 273);
-            this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label1.Location = new System.Drawing.Point(45, 222);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(464, 36);
+            this.label1.Size = new System.Drawing.Size(401, 30);
             this.label1.TabIndex = 91;
             this.label1.Text = "Este es el ID que identificara al empleado, no le asigne un ID\r\nque ya este vincu" +
     "lado a otro empleado.";
@@ -86,20 +87,19 @@
             // textBoxIDEmpleado
             // 
             this.textBoxIDEmpleado.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxIDEmpleado.Location = new System.Drawing.Point(64, 323);
-            this.textBoxIDEmpleado.Margin = new System.Windows.Forms.Padding(5);
+            this.textBoxIDEmpleado.Location = new System.Drawing.Point(48, 262);
+            this.textBoxIDEmpleado.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBoxIDEmpleado.Name = "textBoxIDEmpleado";
-            this.textBoxIDEmpleado.Size = new System.Drawing.Size(213, 24);
+            this.textBoxIDEmpleado.Size = new System.Drawing.Size(161, 21);
             this.textBoxIDEmpleado.TabIndex = 90;
             this.textBoxIDEmpleado.TextChanged += new System.EventHandler(this.textBoxIDEmpleado_TextChanged);
             // 
             // buttonAgregarEmpleado
             // 
             this.buttonAgregarEmpleado.BackColor = System.Drawing.Color.GreenYellow;
-            this.buttonAgregarEmpleado.Location = new System.Drawing.Point(64, 384);
-            this.buttonAgregarEmpleado.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonAgregarEmpleado.Location = new System.Drawing.Point(48, 312);
             this.buttonAgregarEmpleado.Name = "buttonAgregarEmpleado";
-            this.buttonAgregarEmpleado.Size = new System.Drawing.Size(148, 73);
+            this.buttonAgregarEmpleado.Size = new System.Drawing.Size(111, 59);
             this.buttonAgregarEmpleado.TabIndex = 89;
             this.buttonAgregarEmpleado.Text = "Agregar al sistema";
             this.buttonAgregarEmpleado.UseVisualStyleBackColor = false;
@@ -109,30 +109,28 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(218, 46);
-            this.label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label2.Location = new System.Drawing.Point(164, 37);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(538, 25);
+            this.label2.Size = new System.Drawing.Size(420, 20);
             this.label2.TabIndex = 88;
-            this.label2.Text = "Diligenciar datos del empleado que quiere agregar al sistema";
+            this.label2.Text = "Diligenciar datos del usuario que quiere agregar al sistema";
             // 
             // comboBoxTipoIdentificacionEmpleado
             // 
             this.comboBoxTipoIdentificacionEmpleado.FormattingEnabled = true;
-            this.comboBoxTipoIdentificacionEmpleado.Location = new System.Drawing.Point(632, 143);
-            this.comboBoxTipoIdentificacionEmpleado.Margin = new System.Windows.Forms.Padding(4);
+            this.comboBoxTipoIdentificacionEmpleado.Location = new System.Drawing.Point(474, 116);
             this.comboBoxTipoIdentificacionEmpleado.Name = "comboBoxTipoIdentificacionEmpleado";
-            this.comboBoxTipoIdentificacionEmpleado.Size = new System.Drawing.Size(213, 24);
+            this.comboBoxTipoIdentificacionEmpleado.Size = new System.Drawing.Size(161, 21);
             this.comboBoxTipoIdentificacionEmpleado.TabIndex = 87;
             this.comboBoxTipoIdentificacionEmpleado.SelectedIndexChanged += new System.EventHandler(this.comboBoxTipoIdentificacionEmpleado_SelectedIndexChanged);
             // 
             // buttonRegresar
             // 
             this.buttonRegresar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonRegresar.Location = new System.Drawing.Point(16, 13);
-            this.buttonRegresar.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonRegresar.Location = new System.Drawing.Point(12, 11);
             this.buttonRegresar.Name = "buttonRegresar";
-            this.buttonRegresar.Size = new System.Drawing.Size(140, 39);
+            this.buttonRegresar.Size = new System.Drawing.Size(105, 32);
             this.buttonRegresar.TabIndex = 20;
             this.buttonRegresar.Text = "Regresar";
             this.buttonRegresar.UseVisualStyleBackColor = true;
@@ -141,96 +139,97 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(356, 189);
-            this.label11.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label11.Location = new System.Drawing.Point(267, 154);
+            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(125, 16);
+            this.label11.Size = new System.Drawing.Size(100, 13);
             this.label11.TabIndex = 86;
             this.label11.Text = "Número de teléfono";
             // 
             // textBoxApellidoEmpleado
             // 
-            this.textBoxApellidoEmpleado.Location = new System.Drawing.Point(360, 144);
-            this.textBoxApellidoEmpleado.Margin = new System.Windows.Forms.Padding(5);
+            this.textBoxApellidoEmpleado.Location = new System.Drawing.Point(270, 117);
+            this.textBoxApellidoEmpleado.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBoxApellidoEmpleado.Name = "textBoxApellidoEmpleado";
-            this.textBoxApellidoEmpleado.Size = new System.Drawing.Size(213, 22);
+            this.textBoxApellidoEmpleado.Size = new System.Drawing.Size(161, 20);
             this.textBoxApellidoEmpleado.TabIndex = 81;
             this.textBoxApellidoEmpleado.TextChanged += new System.EventHandler(this.textBoxApellidoEmpleado_TextChanged);
             // 
             // textBoxNumeroTelefonoEmpleado
             // 
-            this.textBoxNumeroTelefonoEmpleado.Location = new System.Drawing.Point(360, 214);
-            this.textBoxNumeroTelefonoEmpleado.Margin = new System.Windows.Forms.Padding(5);
+            this.textBoxNumeroTelefonoEmpleado.Location = new System.Drawing.Point(270, 174);
+            this.textBoxNumeroTelefonoEmpleado.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBoxNumeroTelefonoEmpleado.Name = "textBoxNumeroTelefonoEmpleado";
-            this.textBoxNumeroTelefonoEmpleado.Size = new System.Drawing.Size(213, 22);
+            this.textBoxNumeroTelefonoEmpleado.Size = new System.Drawing.Size(161, 20);
             this.textBoxNumeroTelefonoEmpleado.TabIndex = 85;
             this.textBoxNumeroTelefonoEmpleado.TextChanged += new System.EventHandler(this.textBoxNumeroTelefonoEmpleado_TextChanged);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(60, 123);
-            this.label3.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label3.Location = new System.Drawing.Point(45, 100);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(56, 16);
+            this.label3.Size = new System.Drawing.Size(44, 13);
             this.label3.TabIndex = 78;
             this.label3.Text = "Nombre";
             // 
             // txtNumeroIdentificacionEmpleado
             // 
-            this.txtNumeroIdentificacionEmpleado.Location = new System.Drawing.Point(64, 214);
-            this.txtNumeroIdentificacionEmpleado.Margin = new System.Windows.Forms.Padding(5);
+            this.txtNumeroIdentificacionEmpleado.Location = new System.Drawing.Point(48, 174);
+            this.txtNumeroIdentificacionEmpleado.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtNumeroIdentificacionEmpleado.Name = "txtNumeroIdentificacionEmpleado";
-            this.txtNumeroIdentificacionEmpleado.Size = new System.Drawing.Size(213, 22);
+            this.txtNumeroIdentificacionEmpleado.Size = new System.Drawing.Size(161, 20);
             this.txtNumeroIdentificacionEmpleado.TabIndex = 84;
             this.txtNumeroIdentificacionEmpleado.TextChanged += new System.EventHandler(this.txtNumeroIdentificacionEmpleado_TextChanged);
             // 
             // textBoxNombreUsuario
             // 
-            this.textBoxNombreUsuario.Location = new System.Drawing.Point(64, 144);
-            this.textBoxNombreUsuario.Margin = new System.Windows.Forms.Padding(5);
+            this.textBoxNombreUsuario.Location = new System.Drawing.Point(48, 117);
+            this.textBoxNombreUsuario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBoxNombreUsuario.Name = "textBoxNombreUsuario";
-            this.textBoxNombreUsuario.Size = new System.Drawing.Size(213, 22);
+            this.textBoxNombreUsuario.Size = new System.Drawing.Size(161, 20);
             this.textBoxNombreUsuario.TabIndex = 79;
             this.textBoxNombreUsuario.TextChanged += new System.EventHandler(this.textBoxNombreUsuario_TextChanged);
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(60, 189);
-            this.label7.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label7.Location = new System.Drawing.Point(45, 154);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(155, 16);
+            this.label7.Size = new System.Drawing.Size(125, 13);
             this.label7.TabIndex = 83;
             this.label7.Text = "Número de Identificación";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(356, 123);
-            this.label4.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label4.Location = new System.Drawing.Point(267, 100);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(57, 16);
+            this.label4.Size = new System.Drawing.Size(44, 13);
             this.label4.TabIndex = 80;
             this.label4.Text = "Apellido";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(628, 119);
-            this.label8.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label8.Location = new System.Drawing.Point(471, 97);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(116, 16);
+            this.label8.Size = new System.Drawing.Size(93, 13);
             this.label8.TabIndex = 82;
             this.label8.Text = "Tipo identificación";
             // 
             // FormAgregarEmpleado
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(1112, 628);
+            this.ClientSize = new System.Drawing.Size(834, 510);
             this.Controls.Add(this.panel1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "FormAgregarEmpleado";
             this.Text = "Agregar empleado";
             this.Load += new System.EventHandler(this.FormAgregarEmpleado_Load);

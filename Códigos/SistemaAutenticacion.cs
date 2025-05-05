@@ -9,52 +9,53 @@ namespace PROYECTO_TRENES.Códigos
 {
     public class SistemaAutenticacion
     {
-        private TablaHash<string, UserInfo> tablaUsuarios;
+        private TablaHash<string, Usuario> tablaUsuarios;
 
-        public SistemaAutenticacion(TablaHash<string, UserInfo> existingTable)
+        public SistemaAutenticacion(TablaHash<string, Usuario> existingTable)
         {
-            if (existingTable == null)
-            {
-                throw new ArgumentNullException(nameof(existingTable), "La tabla hash de usuarios proporcionada no puede ser nula.");
-            }
             tablaUsuarios = existingTable;
         }
 
         public bool RegistrarUsuario(string nombreUsuario, string contrasenia, string rol)
         {
-            if (string.IsNullOrEmpty(nombreUsuario) || string.IsNullOrEmpty(contrasenia) || string.IsNullOrEmpty(rol))
-            {
-                return false;
-            }
-
             if (tablaUsuarios.BuscarValores(nombreUsuario) != null)
             {
                 return false;
             }
 
-            UserInfo nuevoUsuario = new UserInfo
+            Usuario nuevoUsuario = null;
+
+            switch (rol.ToLower())
             {
-                ContraseniaAlmacenada = contrasenia,
-                Rol = rol
-            };
-
-            tablaUsuarios.InsertarValores(nombreUsuario, nuevoUsuario);
-
-            return true;
-        }
-
-        public string IniciarSesion(string nombreUsuario, string contrasenia)
-        {
-            if (string.IsNullOrEmpty(nombreUsuario) || string.IsNullOrEmpty(contrasenia))
-            {
-                return null;
+                case "administrador":
+                    nuevoUsuario = new Administrador(nombreUsuario, contrasenia);
+                    break;
+                case "empleado":
+                    nuevoUsuario = new Empleado(nombreUsuario, contrasenia);
+                    break;
+                case "pasajero":
+                    nuevoUsuario = new Pasajero(nombreUsuario, contrasenia);
+                    break;
+                default:
+                    return false;
             }
 
-            UserInfo storedUserInfo = tablaUsuarios.BuscarValores(nombreUsuario);
-
-            if (storedUserInfo != null && storedUserInfo.ContraseniaAlmacenada == contrasenia)
+            if (nuevoUsuario != null)
             {
-                return storedUserInfo.Rol;
+                tablaUsuarios.InsertarValores(nombreUsuario, nuevoUsuario);
+                return true;
+            }
+
+            return false;
+        }
+
+        public Usuario IniciarSesion(string nombreUsuario, string contrasenia)
+        {
+            Usuario storedUsuario = tablaUsuarios.BuscarValores(nombreUsuario);
+
+            if (storedUsuario != null && storedUsuario.Contrasenia == contrasenia)
+            {
+                return storedUsuario;
             }
 
             return null;

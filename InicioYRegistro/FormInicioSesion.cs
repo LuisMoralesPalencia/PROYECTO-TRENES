@@ -49,33 +49,45 @@ namespace PROYECTO_TRENES.InicioYRegistro
             string nombreUsuario = textBoxUsuario.Text;
             string contrasenia = textBoxContraseña.Text;
 
-            string rolUsuario = sistemaAutenticacion.IniciarSesion(nombreUsuario, contrasenia);
+            Usuario usuarioAutenticado = sistemaAutenticacion.IniciarSesion(nombreUsuario, contrasenia);
 
-            if (rolUsuario != null)
+            if (usuarioAutenticado != null)
             {
-                MessageBox.Show("Inicio de sesión exitoso.\nUsuario: " + nombreUsuario + "\nRol: " + rolUsuario, "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                string tipoUsuario = "Tipo de Usuario Desconocido"; 
 
-                if (rolUsuario == "Administrador")
+                if (usuarioAutenticado is Administrador)
                 {
+                    tipoUsuario = "Administrador";
+                    MessageBox.Show($"Inicio de sesión exitoso.\nUsuario: {usuarioAutenticado.NombreUsuario}\nTipo: {tipoUsuario}", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
                     FormMenuAdministrador formAdmin = new FormMenuAdministrador();
                     formAdmin.Show();
                     this.Hide();
 
                 }
-                else if (rolUsuario == "Empleado")
+                else if (usuarioAutenticado is Empleado)
                 {
-                     MenuPrincipalForm1 formempleado = new MenuPrincipalForm1();
-                     formempleado.Show();
-                     this.Hide();
+                    tipoUsuario = "Empleado";
+                    MessageBox.Show($"Inicio de sesión exitoso.\nUsuario: {usuarioAutenticado.NombreUsuario}\nTipo: {tipoUsuario}", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    MenuPrincipalForm1 formempleado = new MenuPrincipalForm1();
+                    formempleado.Show();
+                    this.Hide();
                 }
-                 else 
-                 {
+                else if (usuarioAutenticado is Pasajero)
+                {
+                    tipoUsuario = "Pasajero";
+                    MessageBox.Show($"Inicio de sesión exitoso.\nUsuario: {usuarioAutenticado.NombreUsuario}\nTipo: {tipoUsuario}", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
                     FormMenuUsuario formUsuario = new FormMenuUsuario();
                     formUsuario.Show();
                     this.Hide();
                 }
-
-                 this.Hide(); 
+                else
+                {
+                    MessageBox.Show($"Inicio de sesión exitoso.\nUsuario: {usuarioAutenticado.NombreUsuario}\nTipo: {tipoUsuario}", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.Hide(); 
+                }
             }
             else
             {
