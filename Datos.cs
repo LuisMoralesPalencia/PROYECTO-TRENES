@@ -10,25 +10,29 @@ namespace PROYECTO_TRENES
 {
     public static class Datos
     {
-        public static TablaHash<string, UserInfo> TablaUsuarios;
-
+        public static TablaHash<string, Usuario> TablaUsuarios;
+        public static ListaCircular<Tren> ListaTrenes;
+        public static ListaEnlazada<Ruta> ListaRutas;
 
         static Datos()
         {
-            TablaUsuarios = new TablaHash<string, UserInfo>(10);
+            ListaRutas = new ListaEnlazada<Ruta>();
+            TablaUsuarios = new TablaHash<string, Usuario>(10);
+            ListaTrenes = new ListaCircular<Tren>();
+
             TablaUsuarios.InsertarValores(
-                "admin",
-                new UserInfo { ContraseniaAlmacenada = "admin123", Rol = "Administrador" }
+                "Camacho",
+                new Administrador("admin", "admin123")
             );
 
             TablaUsuarios.InsertarValores(
-                "empleado1",
-                new UserInfo { ContraseniaAlmacenada = "emp456", Rol = "Empleado" }
+                "Miguel",
+                new Empleado("empleado1", "emp456")
             );
 
             TablaUsuarios.InsertarValores(
-                "pasajero1",
-                new UserInfo { ContraseniaAlmacenada = "pass789", Rol = "Pasajero" }
+                "Ren",
+                new Pasajero("pasajero1", "pass789")
             );
         }
     }

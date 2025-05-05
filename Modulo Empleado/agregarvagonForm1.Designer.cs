@@ -98,6 +98,7 @@
             this.button2.TabIndex = 23;
             this.button2.Text = "Confirmar";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // textBoxCapacidad
             // 
@@ -179,6 +180,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "agregarvagonForm1";
             this.Text = "agregarvagonForm1";
+            this.Load += new System.EventHandler(this.agregarvagonForm1_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);

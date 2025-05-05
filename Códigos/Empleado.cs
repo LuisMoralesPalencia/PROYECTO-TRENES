@@ -8,6 +8,7 @@ namespace PROYECTO_TRENES.Códigos
 {
     public class Empleado : Usuario
     {
+        
         public Empleado(string nombreUsuario, string contrasenia) : base(nombreUsuario, contrasenia)
         {
         }

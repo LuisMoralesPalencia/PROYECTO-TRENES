@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PROYECTO_TRENES.InicioYRegistro;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -24,7 +25,9 @@ namespace PROYECTO_TRENES.Modulo_Empleado
 
         private void button3_Click(object sender, EventArgs e)
         {
-
+            FormInicioSesion formInicioSesion = new FormInicioSesion();
+            formInicioSesion.Show();
+            this.Hide();
         }
 
         private void Verificar_Click(object sender, EventArgs e)

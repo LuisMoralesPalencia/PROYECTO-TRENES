@@ -49,10 +49,16 @@
     <Compile Include="Códigos\Administrador.cs" />
     <Compile Include="Códigos\Empleado.cs" />
     <Compile Include="Códigos\Pasajero.cs" />
+    <Compile Include="Códigos\Ruta.cs" />
     <Compile Include="Códigos\SistemaAutenticacion.cs" />
-    <Compile Include="Códigos\UserInfo.cs" />
+    <Compile Include="Códigos\Tren.cs" />
     <Compile Include="Códigos\Usuario.cs" />
+    <Compile Include="Códigos\Vagon.cs" />
     <Compile Include="Datos.cs" />
+    <Compile Include="Estructuras de datos\ListaCircular.cs" />
+    <Compile Include="Estructuras de datos\ListaEnlazada.cs" />
+    <Compile Include="Estructuras de datos\Nodo.cs" />
+    <Compile Include="Estructuras de datos\Pila.cs" />
     <Compile Include="Estructuras de datos\TablaHash.cs" />
     <Compile Include="InicioYRegistro\FormInicioSesion.cs">
       <SubType>Form</SubType>
@@ -89,12 +95,6 @@
     </Compile>
     <Compile Include="Modulo administrador\FormMenuAdministrador.Designer.cs">
       <DependentUpon>FormMenuAdministrador.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Modulo administrador\FormModificarUsuario.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Modulo administrador\FormModificarUsuario.Designer.cs">
-      <DependentUpon>FormModificarUsuario.cs</DependentUpon>
     </Compile>
     <Compile Include="Modulo Empleado\agregarrutaForm1.cs">
       <SubType>Form</SubType>
@@ -283,9 +283,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Modulo administrador\FormMenuAdministrador.resx">
       <DependentUpon>FormMenuAdministrador.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Modulo administrador\FormModificarUsuario.resx">
-      <DependentUpon>FormModificarUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Modulo Empleado\agregarrutaForm1.resx">
       <DependentUpon>agregarrutaForm1.cs</DependentUpon>

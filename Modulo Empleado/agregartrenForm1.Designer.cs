@@ -78,6 +78,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(585, 326);
             this.panel1.TabIndex = 14;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // button1
             // 
@@ -115,6 +116,7 @@
             this.button2.TabIndex = 10;
             this.button2.Text = "Confirmar";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // textBox4
             // 
@@ -212,6 +214,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "agregartrenForm1";
             this.Text = "agregartrenForm1";
+            this.Load += new System.EventHandler(this.agregartrenForm1_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
