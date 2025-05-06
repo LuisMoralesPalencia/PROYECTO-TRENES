@@ -1,6 +1,6 @@
 ﻿namespace PROYECTO_TRENES.Modulo_administrador
 {
-    partial class FormAgregarEmpleado
+    partial class FormAgregarUsuario
     {
         /// <summary>
         /// Required designer variable.
@@ -65,11 +65,11 @@
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label8);
-            this.panel1.Location = new System.Drawing.Point(52, 31);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Location = new System.Drawing.Point(71, 46);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(730, 443);
-            this.panel1.TabIndex = 0;
+            this.panel1.TabIndex = 1;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // label1
@@ -88,7 +88,7 @@
             // 
             this.textBoxIDEmpleado.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxIDEmpleado.Location = new System.Drawing.Point(48, 262);
-            this.textBoxIDEmpleado.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxIDEmpleado.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxIDEmpleado.Name = "textBoxIDEmpleado";
             this.textBoxIDEmpleado.Size = new System.Drawing.Size(161, 21);
             this.textBoxIDEmpleado.TabIndex = 90;
@@ -112,9 +112,9 @@
             this.label2.Location = new System.Drawing.Point(164, 37);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(420, 20);
+            this.label2.Size = new System.Drawing.Size(438, 20);
             this.label2.TabIndex = 88;
-            this.label2.Text = "Diligenciar datos del usuario que quiere agregar al sistema";
+            this.label2.Text = "Diligenciar datos del empleado que quiere agregar al sistema";
             // 
             // comboBoxTipoIdentificacionEmpleado
             // 
@@ -149,7 +149,7 @@
             // textBoxApellidoEmpleado
             // 
             this.textBoxApellidoEmpleado.Location = new System.Drawing.Point(270, 117);
-            this.textBoxApellidoEmpleado.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxApellidoEmpleado.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxApellidoEmpleado.Name = "textBoxApellidoEmpleado";
             this.textBoxApellidoEmpleado.Size = new System.Drawing.Size(161, 20);
             this.textBoxApellidoEmpleado.TabIndex = 81;
@@ -158,7 +158,7 @@
             // textBoxNumeroTelefonoEmpleado
             // 
             this.textBoxNumeroTelefonoEmpleado.Location = new System.Drawing.Point(270, 174);
-            this.textBoxNumeroTelefonoEmpleado.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxNumeroTelefonoEmpleado.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxNumeroTelefonoEmpleado.Name = "textBoxNumeroTelefonoEmpleado";
             this.textBoxNumeroTelefonoEmpleado.Size = new System.Drawing.Size(161, 20);
             this.textBoxNumeroTelefonoEmpleado.TabIndex = 85;
@@ -177,7 +177,7 @@
             // txtNumeroIdentificacionEmpleado
             // 
             this.txtNumeroIdentificacionEmpleado.Location = new System.Drawing.Point(48, 174);
-            this.txtNumeroIdentificacionEmpleado.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNumeroIdentificacionEmpleado.Margin = new System.Windows.Forms.Padding(4);
             this.txtNumeroIdentificacionEmpleado.Name = "txtNumeroIdentificacionEmpleado";
             this.txtNumeroIdentificacionEmpleado.Size = new System.Drawing.Size(161, 20);
             this.txtNumeroIdentificacionEmpleado.TabIndex = 84;
@@ -186,7 +186,7 @@
             // textBoxNombreUsuario
             // 
             this.textBoxNombreUsuario.Location = new System.Drawing.Point(48, 117);
-            this.textBoxNombreUsuario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxNombreUsuario.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxNombreUsuario.Name = "textBoxNombreUsuario";
             this.textBoxNombreUsuario.Size = new System.Drawing.Size(161, 20);
             this.textBoxNombreUsuario.TabIndex = 79;
@@ -222,17 +222,16 @@
             this.label8.TabIndex = 82;
             this.label8.Text = "Tipo identificación";
             // 
-            // FormAgregarEmpleado
+            // FormAgregarUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(834, 510);
+            this.ClientSize = new System.Drawing.Size(840, 518);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.Name = "FormAgregarEmpleado";
-            this.Text = "Agregar empleado";
-            this.Load += new System.EventHandler(this.FormAgregarEmpleado_Load);
+            this.Name = "FormAgregarUsuario";
+            this.Text = "FormAgregarUsuario";
+            this.Load += new System.EventHandler(this.FormAgregarUsuario_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -242,8 +241,12 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button buttonRegresar;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox textBoxIDEmpleado;
+        private System.Windows.Forms.Button buttonAgregarEmpleado;
+        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox comboBoxTipoIdentificacionEmpleado;
+        private System.Windows.Forms.Button buttonRegresar;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox textBoxApellidoEmpleado;
         private System.Windows.Forms.TextBox textBoxNumeroTelefonoEmpleado;
@@ -253,9 +256,5 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBoxIDEmpleado;
-        private System.Windows.Forms.Button buttonAgregarEmpleado;
     }
 }

@@ -72,17 +72,23 @@
     <Compile Include="InicioYRegistro\FormRegistrarse.Designer.cs">
       <DependentUpon>FormRegistrarse.cs</DependentUpon>
     </Compile>
-    <Compile Include="Modulo administrador\FormAgregarEmpleado.cs">
+    <Compile Include="Modulo administrador\FormAgregarUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Modulo administrador\FormAgregarEmpleado.Designer.cs">
-      <DependentUpon>FormAgregarEmpleado.cs</DependentUpon>
+    <Compile Include="Modulo administrador\FormAgregarUsuario.Designer.cs">
+      <DependentUpon>FormAgregarUsuario.cs</DependentUpon>
     </Compile>
     <Compile Include="Modulo administrador\FormBuscarUsuarios.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Modulo administrador\FormBuscarUsuarios.Designer.cs">
       <DependentUpon>FormBuscarUsuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modulo administrador\FormEliminar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulo administrador\FormEliminar.Designer.cs">
+      <DependentUpon>FormEliminar.cs</DependentUpon>
     </Compile>
     <Compile Include="Modulo administrador\FormEliminarUsuario.cs">
       <SubType>Form</SubType>
@@ -272,11 +278,14 @@
     <EmbeddedResource Include="InicioYRegistro\FormRegistrarse.resx">
       <DependentUpon>FormRegistrarse.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Modulo administrador\FormAgregarEmpleado.resx">
-      <DependentUpon>FormAgregarEmpleado.cs</DependentUpon>
+    <EmbeddedResource Include="Modulo administrador\FormAgregarUsuario.resx">
+      <DependentUpon>FormAgregarUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Modulo administrador\FormBuscarUsuarios.resx">
       <DependentUpon>FormBuscarUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulo administrador\FormEliminar.resx">
+      <DependentUpon>FormEliminar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Modulo administrador\FormEliminarUsuario.resx">
       <DependentUpon>FormEliminarUsuario.cs</DependentUpon>

@@ -1,4 +1,5 @@
 ﻿using PROYECTO_TRENES.Códigos;
+using PROYECTO_TRENES.Estructuras_de_datos;
 using PROYECTO_TRENES.Modulo_administrador;
 using PROYECTO_TRENES.Modulo_Empleado;
 using PROYECTO_TRENES.Modulo_Usuarios;
@@ -46,14 +47,20 @@ namespace PROYECTO_TRENES.InicioYRegistro
 
         private void buttonIniciarSesion_Click(object sender, EventArgs e)
         {
-            string nombreUsuario = textBoxUsuario.Text;
-            string contrasenia = textBoxContraseña.Text;
+            string nombreUsuario = textBoxUsuario.Text.Trim();
+            string contrasenia = textBoxContraseña.Text.Trim();
+
+            if (string.IsNullOrWhiteSpace(nombreUsuario) || string.IsNullOrWhiteSpace(contrasenia))
+            {
+                MessageBox.Show("Por favor, ingrese nombre de usuario y contraseña.", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
 
             Usuario usuarioAutenticado = sistemaAutenticacion.IniciarSesion(nombreUsuario, contrasenia);
 
             if (usuarioAutenticado != null)
             {
-                string tipoUsuario = "Tipo de Usuario Desconocido"; 
+                string tipoUsuario = "Tipo de Usuario Desconocido";
 
                 if (usuarioAutenticado is Administrador)
                 {
@@ -86,7 +93,7 @@ namespace PROYECTO_TRENES.InicioYRegistro
                 else
                 {
                     MessageBox.Show($"Inicio de sesión exitoso.\nUsuario: {usuarioAutenticado.NombreUsuario}\nTipo: {tipoUsuario}", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    this.Hide(); 
+                    this.Hide();
                 }
             }
             else

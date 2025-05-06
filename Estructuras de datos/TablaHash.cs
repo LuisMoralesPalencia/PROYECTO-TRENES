@@ -53,6 +53,19 @@ namespace PROYECTO_TRENES.Estructuras_de_datos
             return listaClaves;
         }
 
+        public List<V> ObtenerValores()
+        {
+            List<V> listaValores = new List<V>();
+            for (int i = 0; i < tamanio; i++)
+            {
+                if (valores[i] != null) 
+                {
+                    listaValores.Add(valores[i]);
+                }
+            }
+            return listaValores;
+        }
+
         public void InsertarValores(K clave, V valor)
         {
             if (ContieneClave(clave))
@@ -96,18 +109,45 @@ namespace PROYECTO_TRENES.Estructuras_de_datos
         {
             int indice = HashFunction(clave);
 
+            int inicioBusqueda = indice;
+            bool encontrado = false;
+            int indiceAEliminar = -1;
+
             while (claves[indice] != null)
             {
                 if (claves[indice].Equals(clave))
                 {
-                    claves[indice] = default(K); 
-                    valores[indice] = default(V); 
-                    Console.WriteLine("Clave eliminada: " + clave);
-                    return;
+                    encontrado = true;
+                    indiceAEliminar = indice;
+                    break;
                 }
                 indice = (indice + 1) % tamanio;
+                if (indice == inicioBusqueda) break;
             }
-            Console.WriteLine("Clave " + clave + " no encontrada.");
+
+            if (!encontrado)
+            {
+                Console.WriteLine("Clave " + clave + " no encontrada.");
+                return;
+            }
+
+            claves[indiceAEliminar] = default(K);
+            valores[indiceAEliminar] = default(V);
+            Console.WriteLine("Clave eliminada: " + clave);
+
+            indice = (indiceAEliminar + 1) % tamanio;
+            while (claves[indice] != null)
+            {
+                K claveAReubicar = claves[indice];
+                V valorAReubicar = valores[indice];
+
+                claves[indice] = default(K);
+                valores[indice] = default(V);
+
+                InsertarValores(claveAReubicar, valorAReubicar);
+                indice = (indice + 1) % tamanio;
+            }
+
         }
 
         public void MostrarValores()
