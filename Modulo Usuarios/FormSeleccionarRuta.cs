@@ -143,7 +143,7 @@ namespace PROYECTO_TRENES.Modulo_Usuarios
             }
         }
 
-        private void CargarEstaciones()
+        public Boolean CargarEstaciones()
         {
             List<string> nombresEstaciones = maquinaVenta.ObtenerTodasLasEstaciones();
 
@@ -157,10 +157,15 @@ namespace PROYECTO_TRENES.Modulo_Usuarios
                     comboBoxEstacionOrigen.Items.Add(nombreEstacion);
                     comboBoxEstacionDestino.Items.Add(nombreEstacion);
                 }
+                return true;
             }
             else
             {
-                MessageBox.Show("No se encontraron estaciones en el sistema. Por favor, registre estaciones primero.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("No se encontraron estaciones en el sistema. Por favor, registre estaciones primero.",
+                                "Advertencia",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Warning);
+                return false;
             }
         }
 
@@ -175,6 +180,11 @@ namespace PROYECTO_TRENES.Modulo_Usuarios
             FormRellenarDatosBoleto formRellenarDatosBoleto = new FormRellenarDatosBoleto();
             formRellenarDatosBoleto.Show();
             this.Hide();
+        }
+
+        private void panel1_Paint_1(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

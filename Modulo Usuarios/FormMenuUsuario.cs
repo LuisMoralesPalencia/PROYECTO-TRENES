@@ -36,8 +36,12 @@ namespace PROYECTO_TRENES.Modulo_Usuarios
         private void buttonComprarBoletos_Click(object sender, EventArgs e)
         {
             FormSeleccionarRuta formSeleccionarRuta = new FormSeleccionarRuta();
-            formSeleccionarRuta.Show();
-            this.Hide();
+
+            if (formSeleccionarRuta.CargarEstaciones())
+            {
+                formSeleccionarRuta.Show();
+                this.Hide();
+            }
         }
 
         private void buttonMirarBoletosComprados_Click(object sender, EventArgs e)

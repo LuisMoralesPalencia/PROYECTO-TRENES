@@ -105,5 +105,10 @@ namespace PROYECTO_TRENES.Modulo_Empleado
         {
 
         }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

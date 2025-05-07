@@ -19,6 +19,8 @@ namespace PROYECTO_TRENES
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new FormInicioSesion());
+            //Application.Run(new FormRellenarDatosBoleto());
+            //Application.Run(new FormResumenBoleto());
         }
     }
 }

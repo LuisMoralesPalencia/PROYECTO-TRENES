@@ -83,7 +83,7 @@ namespace PROYECTO_TRENES.Códigos
             return new ResultadoDijkstra { Alcanzado = false, DistanciaTotal = double.PositiveInfinity, RutasDelCamino = new List<Ruta>() };
         }
 
-        public bool RealizarCompra(string idRuta, string idPasajero, string nombresPasajero, string apellidosPasajero, string tipoIdentificacionPasajero, string direccionPasajero, string telefonoPasajero, string lugarAsiento, string categoriaPasajero, double valorPasaje, string contactoNombres, string contactoApellidos, string contactoTelefono, string idVagonCarga = null, List<Equipaje> listaEquipaje = null)
+        /*public bool RealizarCompra(string idRuta, string idPasajero, string nombresPasajero, string apellidosPasajero, string tipoIdentificacionPasajero, string direccionPasajero, string telefonoPasajero, string lugarAsiento, string categoriaPasajero, double valorPasaje, string contactoNombres, string contactoApellidos, string contactoTelefono, string idVagonCarga = null, List<Equipaje> listaEquipaje = null)
         {
             Ruta rutaAComprar = BuscarRutaPorId(idRuta);
 
@@ -102,11 +102,11 @@ namespace PROYECTO_TRENES.Códigos
                     idRegistroBoleto,
                     fechaHoraActualCompra,
                     fechaSalidaRuta,
-                    fechaLlegadaRuta,
-                    idPasajero,
+                    fechaLlegadaRuta,        
                     nombresPasajero,
                     apellidosPasajero,
                     tipoIdentificacionPasajero,
+                    identificacion,
                     direccionPasajero,
                     telefonoPasajero,
                     idTrenRuta,
@@ -117,7 +117,7 @@ namespace PROYECTO_TRENES.Códigos
                     contactoApellidos,
                     contactoTelefono,
                     idVagonCarga
-                );
+                ); 
 
                 
 
@@ -144,7 +144,7 @@ namespace PROYECTO_TRENES.Códigos
                 Console.WriteLine($"Simulacion: Error al comprar. Ruta {idRuta} no encontrada.");
                 return false;
             }
-        }
+        } */
 
         public bool CancelarCompra(string idRegistroBoleto)
         {
@@ -177,7 +177,7 @@ namespace PROYECTO_TRENES.Códigos
 
             if (boletoACancelar != null)
             {
-                if (boletoACancelar.Estado == "Válido")
+                if (boletoACancelar.Estado)
                 {
                     boletoACancelar.Cancelar();
 
