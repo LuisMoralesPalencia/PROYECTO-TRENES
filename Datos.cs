@@ -12,13 +12,14 @@ namespace PROYECTO_TRENES
     {
         public static TablaHash<string, Usuario> TablaUsuarios;
         public static ListaCircular<Tren> ListaTrenes;
-        public static ListaEnlazada<Ruta> ListaRutas;
-
+        public static Grafo RedFerroviaria;
+        public static ListaDoblementeEnlazada<Boleto> ListaBoletos;
         static Datos()
         {
-            ListaRutas = new ListaEnlazada<Ruta>();
             ListaTrenes = new ListaCircular<Tren>();
-            TablaUsuarios = new TablaHash<string, Usuario>(200); 
+            TablaUsuarios = new TablaHash<string, Usuario>(200);
+            RedFerroviaria = new Grafo();
+            ListaBoletos = new ListaDoblementeEnlazada<Boleto>();
 
             TablaUsuarios.InsertarValores(
                 "admin",
@@ -34,6 +35,8 @@ namespace PROYECTO_TRENES
                 "pasajero1", 
                 new Pasajero("pasajero1", "NombrePasajero", "ApellidoPasajero", "CC", "101010101", "3207778899", "pass789") 
             );
+
+
 
         }
     }

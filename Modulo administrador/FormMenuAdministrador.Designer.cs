@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
             this.buttonBuscarUsuario = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.buttonCerrarSesion = new System.Windows.Forms.Button();
@@ -42,7 +41,6 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.buttonBuscarUsuario);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.buttonCerrarSesion);
@@ -50,20 +48,9 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(57, 52);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(696, 381);
+            this.panel1.Size = new System.Drawing.Size(696, 293);
             this.panel1.TabIndex = 1;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
-            // 
-            // button1
-            // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(295, 261);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(104, 63);
-            this.button1.TabIndex = 25;
-            this.button1.Text = "Eliminar usuarios";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // buttonBuscarUsuario
             // 
@@ -157,7 +144,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button buttonBuscarUsuario;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label4;
     }
 }

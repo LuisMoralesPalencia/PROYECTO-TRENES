@@ -34,7 +34,7 @@ namespace PROYECTO_TRENES.Modulo_Empleado
 
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e) 
         {
             string idBuscar = textBox2.Text.Trim();
 
@@ -47,19 +47,7 @@ namespace PROYECTO_TRENES.Modulo_Empleado
                 return;
             }
 
-            Ruta rutaEncontrada = null;
-            Nodo<Ruta> actualRuta = Datos.ListaRutas.GetCabeza();
-
-            while (actualRuta != null)
-            {
-                if (actualRuta.Valor.IdRuta == idBuscar)
-                {
-                    rutaEncontrada = actualRuta.Valor;
-                    break;
-                }
-                actualRuta = actualRuta.Siguiente;
-            }
-
+            Ruta rutaEncontrada = Datos.RedFerroviaria.BuscarRuta(idBuscar);
             if (rutaEncontrada != null)
             {
                 this.rutaEncontradaParaEliminar = rutaEncontrada;
@@ -71,7 +59,8 @@ namespace PROYECTO_TRENES.Modulo_Empleado
                                    $"Destino: {rutaEncontrada.Destino}\r\n" +
                                    $"Fecha Salida: {rutaEncontrada.FechaSalida}\r\n" +
                                    $"Fecha Llegada: {rutaEncontrada.FechaLlegada}\r\n" +
-                                   $"Tren Asociado (ID): {rutaEncontrada.Tren?.Id ?? "N/A"}";
+                                   $"Distancia: {rutaEncontrada.Distancia} km\r\n" +
+                                   $"Tren Asociado (ID): {rutaEncontrada.Tren?.Id ?? "N/A"}\r\n";
 
             }
             else
@@ -93,12 +82,12 @@ namespace PROYECTO_TRENES.Modulo_Empleado
 
             if (confirmacion == DialogResult.Yes)
             {
-                bool eliminado = Datos.ListaRutas.Eliminar(this.rutaEncontradaParaEliminar);
-
+               
+                bool eliminado = Datos.RedFerroviaria.EliminarRuta(this.rutaEncontradaParaEliminar.IdRuta);
+                
                 if (eliminado)
                 {
                     MessageBox.Show($"Ruta con ID {this.rutaEncontradaParaEliminar.IdRuta} eliminada exitosamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
                     textBox2.Text = "";
                     richTextBox1.Text = "";
                     this.rutaEncontradaParaEliminar = null;
@@ -111,6 +100,11 @@ namespace PROYECTO_TRENES.Modulo_Empleado
                     this.rutaEncontradaParaEliminar = null;
                 }
             }
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

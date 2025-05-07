@@ -29,24 +29,26 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.comboBoxEstacionDestino = new System.Windows.Forms.ComboBox();
+            this.comboBoxEstacionOrigen = new System.Windows.Forms.ComboBox();
+            this.richTextBoxInformacionRuta = new System.Windows.Forms.RichTextBox();
             this.buttonRegresar = new System.Windows.Forms.Button();
             this.buttonSeleccionarRuta = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.richTextBoxInformacionRuta = new System.Windows.Forms.RichTextBox();
-            this.comboBoxEstacionOrigen = new System.Windows.Forms.ComboBox();
-            this.comboBoxEstacionDestino = new System.Windows.Forms.ComboBox();
-            this.comboBoxRutasDisponibles = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.textBoxRutaSeleccionada = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.Control;
+            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.textBoxRutaSeleccionada);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.comboBoxRutasDisponibles);
             this.panel1.Controls.Add(this.comboBoxEstacionDestino);
             this.panel1.Controls.Add(this.comboBoxEstacionOrigen);
             this.panel1.Controls.Add(this.richTextBoxInformacionRuta);
@@ -60,6 +62,33 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(631, 510);
             this.panel1.TabIndex = 19;
+            // 
+            // comboBoxEstacionDestino
+            // 
+            this.comboBoxEstacionDestino.FormattingEnabled = true;
+            this.comboBoxEstacionDestino.Location = new System.Drawing.Point(43, 136);
+            this.comboBoxEstacionDestino.Name = "comboBoxEstacionDestino";
+            this.comboBoxEstacionDestino.Size = new System.Drawing.Size(121, 21);
+            this.comboBoxEstacionDestino.TabIndex = 30;
+            this.comboBoxEstacionDestino.SelectedIndexChanged += new System.EventHandler(this.comboBoxEstacionDestino_SelectedIndexChanged);
+            // 
+            // comboBoxEstacionOrigen
+            // 
+            this.comboBoxEstacionOrigen.FormattingEnabled = true;
+            this.comboBoxEstacionOrigen.Location = new System.Drawing.Point(43, 84);
+            this.comboBoxEstacionOrigen.Name = "comboBoxEstacionOrigen";
+            this.comboBoxEstacionOrigen.Size = new System.Drawing.Size(121, 21);
+            this.comboBoxEstacionOrigen.TabIndex = 29;
+            this.comboBoxEstacionOrigen.SelectedIndexChanged += new System.EventHandler(this.comboBoxEstacionOrigen_SelectedIndexChanged);
+            // 
+            // richTextBoxInformacionRuta
+            // 
+            this.richTextBoxInformacionRuta.Location = new System.Drawing.Point(43, 186);
+            this.richTextBoxInformacionRuta.Name = "richTextBoxInformacionRuta";
+            this.richTextBoxInformacionRuta.Size = new System.Drawing.Size(550, 221);
+            this.richTextBoxInformacionRuta.TabIndex = 28;
+            this.richTextBoxInformacionRuta.Text = "";
+            this.richTextBoxInformacionRuta.TextChanged += new System.EventHandler(this.richTextBoxInformacionRuta_TextChanged);
             // 
             // buttonRegresar
             // 
@@ -75,12 +104,12 @@
             // buttonSeleccionarRuta
             // 
             this.buttonSeleccionarRuta.BackColor = System.Drawing.Color.GreenYellow;
-            this.buttonSeleccionarRuta.Location = new System.Drawing.Point(190, 453);
+            this.buttonSeleccionarRuta.Location = new System.Drawing.Point(43, 454);
             this.buttonSeleccionarRuta.Margin = new System.Windows.Forms.Padding(4);
             this.buttonSeleccionarRuta.Name = "buttonSeleccionarRuta";
             this.buttonSeleccionarRuta.Size = new System.Drawing.Size(267, 36);
             this.buttonSeleccionarRuta.TabIndex = 24;
-            this.buttonSeleccionarRuta.Text = "Seleccionar ruta";
+            this.buttonSeleccionarRuta.Text = "Buscar ruta";
             this.buttonSeleccionarRuta.UseVisualStyleBackColor = false;
             this.buttonSeleccionarRuta.Click += new System.EventHandler(this.buttonSeleccionarRuta_Click);
             // 
@@ -115,42 +144,6 @@
             this.label4.TabIndex = 19;
             this.label4.Text = "Estación de Destino";
             // 
-            // richTextBoxInformacionRuta
-            // 
-            this.richTextBoxInformacionRuta.Location = new System.Drawing.Point(43, 186);
-            this.richTextBoxInformacionRuta.Name = "richTextBoxInformacionRuta";
-            this.richTextBoxInformacionRuta.Size = new System.Drawing.Size(550, 181);
-            this.richTextBoxInformacionRuta.TabIndex = 28;
-            this.richTextBoxInformacionRuta.Text = "";
-            this.richTextBoxInformacionRuta.TextChanged += new System.EventHandler(this.richTextBoxInformacionRuta_TextChanged);
-            // 
-            // comboBoxEstacionOrigen
-            // 
-            this.comboBoxEstacionOrigen.FormattingEnabled = true;
-            this.comboBoxEstacionOrigen.Location = new System.Drawing.Point(43, 84);
-            this.comboBoxEstacionOrigen.Name = "comboBoxEstacionOrigen";
-            this.comboBoxEstacionOrigen.Size = new System.Drawing.Size(121, 21);
-            this.comboBoxEstacionOrigen.TabIndex = 29;
-            this.comboBoxEstacionOrigen.SelectedIndexChanged += new System.EventHandler(this.comboBoxEstacionOrigen_SelectedIndexChanged);
-            // 
-            // comboBoxEstacionDestino
-            // 
-            this.comboBoxEstacionDestino.FormattingEnabled = true;
-            this.comboBoxEstacionDestino.Location = new System.Drawing.Point(43, 136);
-            this.comboBoxEstacionDestino.Name = "comboBoxEstacionDestino";
-            this.comboBoxEstacionDestino.Size = new System.Drawing.Size(121, 21);
-            this.comboBoxEstacionDestino.TabIndex = 30;
-            this.comboBoxEstacionDestino.SelectedIndexChanged += new System.EventHandler(this.comboBoxEstacionDestino_SelectedIndexChanged);
-            // 
-            // comboBoxRutasDisponibles
-            // 
-            this.comboBoxRutasDisponibles.FormattingEnabled = true;
-            this.comboBoxRutasDisponibles.Location = new System.Drawing.Point(373, 84);
-            this.comboBoxRutasDisponibles.Name = "comboBoxRutasDisponibles";
-            this.comboBoxRutasDisponibles.Size = new System.Drawing.Size(121, 21);
-            this.comboBoxRutasDisponibles.TabIndex = 31;
-            this.comboBoxRutasDisponibles.SelectedIndexChanged += new System.EventHandler(this.comboBoxRutasDisponibles_SelectedIndexChanged);
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -161,14 +154,35 @@
             this.label1.TabIndex = 32;
             this.label1.Text = "Rutas disponibles";
             // 
-            // FormSeleccionarRuta1
+            // textBoxRutaSeleccionada
+            // 
+            this.textBoxRutaSeleccionada.Enabled = false;
+            this.textBoxRutaSeleccionada.Location = new System.Drawing.Point(373, 85);
+            this.textBoxRutaSeleccionada.Name = "textBoxRutaSeleccionada";
+            this.textBoxRutaSeleccionada.Size = new System.Drawing.Size(100, 20);
+            this.textBoxRutaSeleccionada.TabIndex = 33;
+            this.textBoxRutaSeleccionada.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.GreenYellow;
+            this.button1.Location = new System.Drawing.Point(326, 454);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(267, 36);
+            this.button1.TabIndex = 34;
+            this.button1.Text = "Ir a comprar";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // FormSeleccionarRuta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(834, 556);
             this.Controls.Add(this.panel1);
-            this.Name = "FormSeleccionarRuta1";
+            this.Name = "FormSeleccionarRuta";
             this.Text = "Seleccionar ruta";
             this.Load += new System.EventHandler(this.FormSeleccionarRuta1_Load);
             this.panel1.ResumeLayout(false);
@@ -188,7 +202,8 @@
         private System.Windows.Forms.ComboBox comboBoxEstacionOrigen;
         private System.Windows.Forms.RichTextBox richTextBoxInformacionRuta;
         private System.Windows.Forms.ComboBox comboBoxEstacionDestino;
-        private System.Windows.Forms.ComboBox comboBoxRutasDisponibles;
+        private System.Windows.Forms.TextBox textBoxRutaSeleccionada;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button button1;
     }
 }

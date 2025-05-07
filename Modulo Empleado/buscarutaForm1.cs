@@ -14,12 +14,13 @@ namespace PROYECTO_TRENES.Modulo_Empleado
 {
     public partial class buscarutaForm1 : Form
     {
+        
         public buscarutaForm1()
         {
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e) 
         {
             MenuPrincipalForm1 menuPrincipalForm1 = new MenuPrincipalForm1();
             menuPrincipalForm1.Show();
@@ -31,52 +32,56 @@ namespace PROYECTO_TRENES.Modulo_Empleado
 
         }
 
-        private void textBox2_TextChanged(object sender, EventArgs e)
+
+        private void button3_Click(object sender, EventArgs e) 
         {
+            int rutasPublicadasCount = 0;
 
-        }
+            List<Ruta> todasLasRutas = Datos.RedFerroviaria.MostrarRutas();
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            string idBuscar = textBox2.Text.Trim();
-
-            richTextBox1.Text = "";
-
-            if (string.IsNullOrWhiteSpace(idBuscar))
+            if (todasLasRutas == null || todasLasRutas.Count == 0)
             {
-                MessageBox.Show("Por favor, ingrese el ID de la ruta a buscar.", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("No hay rutas para publicar.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
 
-            Ruta rutaEncontrada = null;
-            Nodo<Ruta> actualRuta = Datos.ListaRutas.GetCabeza();
-
-            while (actualRuta != null)
+            foreach (Ruta ruta in todasLasRutas)
             {
-                if (actualRuta.Valor.IdRuta == idBuscar)
+                
+                if (!ruta.EsPublicada)
                 {
-                    rutaEncontrada = actualRuta.Valor;
-                    break;
+                    Datos.RedFerroviaria.PublicarRuta(ruta.IdRuta, true);
+                    rutasPublicadasCount++;
                 }
-                actualRuta = actualRuta.Siguiente;
             }
 
-            if (rutaEncontrada != null)
+            if (rutasPublicadasCount > 0)
             {
-                richTextBox1.Text = "Ruta Encontrada:\r\n" +
-                                     "------------------------\r\n" +
-                                     $"ID Ruta: {rutaEncontrada.IdRuta}\r\n" +
-                                     $"Origen: {rutaEncontrada.Origen}\r\n" +
-                                     $"Destino: {rutaEncontrada.Destino}\r\n" +
-                                     $"Fecha Salida: {rutaEncontrada.FechaSalida}\r\n" +
-                                     $"Fecha Llegada: {rutaEncontrada.FechaLlegada}\r\n" +
-                                     $"Tren Asociado (ID): {rutaEncontrada.Tren?.Id ?? "N/A"}";
-
+                MessageBox.Show($"{rutasPublicadasCount} ruta(s) han sido publicadas exitosamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
-                richTextBox1.Text = $"No se encontró ninguna ruta con el ID: {idBuscar}";
+                MessageBox.Show("Todas las rutas ya estaban publicadas.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+
+            List<Ruta> LasRutas = Datos.RedFerroviaria.MostrarRutas();
+
+            if (todasLasRutas == null || todasLasRutas.Count == 0)
+            {
+                richTextBox1.Text = "No hay rutas registradas en el sistema.";
+            }
+            else
+            {
+                richTextBox1.AppendText("Listado de Rutas:\n");
+                
+                foreach (Ruta ruta in todasLasRutas)
+                {
+                    richTextBox1.AppendText($"ID: {ruta.IdRuta}, Origen: {ruta.Origen}, Destino: {ruta.Destino}, Publicada: {(ruta.EsPublicada ? "Sí" : "No")}\n");
+                }
+                
+            }
+
+            
         }
     }
 }

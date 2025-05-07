@@ -49,11 +49,5 @@ namespace PROYECTO_TRENES.Modulo_administrador
             this.Hide();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            FormEliminar formEliminar = new FormEliminar();
-            formEliminar.Show();
-            this.Hide();
-        }
     }
 }

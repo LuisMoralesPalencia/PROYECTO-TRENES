@@ -14,6 +14,8 @@ namespace PROYECTO_TRENES.Códigos
         private string fechaSalida;
         private string fechaLlegada;
         private Tren tren;
+        private double distancia;
+        private bool esPublicada;
 
         public string IdRuta { get; set; }
         public string Origen { get; set; }
@@ -21,8 +23,10 @@ namespace PROYECTO_TRENES.Códigos
         public string FechaSalida { get; set; }
         public string FechaLlegada { get; set; }
         public Tren Tren { get => tren; set => tren = value; }
+        public double Distancia { get => distancia; set => distancia = value; }
+        public bool EsPublicada { get => esPublicada; set => esPublicada = value; }
 
-        public Ruta(string idRuta, string origen, string destino, string fechaSalida, string fechaLlegada, Tren tren)
+        public Ruta(string idRuta, string origen, string destino, string fechaSalida, string fechaLlegada, Tren tren, double distancia)
         {
             IdRuta = idRuta;
             Origen = origen;
@@ -30,6 +34,13 @@ namespace PROYECTO_TRENES.Códigos
             FechaSalida = fechaSalida;
             FechaLlegada = fechaLlegada;
             Tren = tren;
+            Distancia = distancia;
+            esPublicada = false;
+        }
+
+        public override string ToString()
+        {
+            return $"Ruta {IdRuta}: {Origen} -> {Destino} ({Distancia} km)";
         }
     }
 }

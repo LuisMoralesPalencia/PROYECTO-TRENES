@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PROYECTO_TRENES.InicioYRegistro;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -34,7 +35,9 @@ namespace PROYECTO_TRENES.Modulo_Usuarios
 
         private void buttonComprarBoletos_Click(object sender, EventArgs e)
         {
-
+            FormSeleccionarRuta formSeleccionarRuta = new FormSeleccionarRuta();
+            formSeleccionarRuta.Show();
+            this.Hide();
         }
 
         private void buttonMirarBoletosComprados_Click(object sender, EventArgs e)
@@ -44,7 +47,9 @@ namespace PROYECTO_TRENES.Modulo_Usuarios
 
         private void buttonCerrarSesion_Click(object sender, EventArgs e)
         {
-
+            FormInicioSesion formInicioSesion = new FormInicioSesion();
+            formInicioSesion.Show();
+            this.Hide();
         }
     }
 }

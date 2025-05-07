@@ -36,6 +36,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -44,14 +45,15 @@
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.textBox6 = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.GreenYellow;
-            this.button2.Location = new System.Drawing.Point(399, 413);
+            this.button2.Location = new System.Drawing.Point(250, 359);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 54;
@@ -68,7 +70,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(61, 257);
+            this.textBox1.Location = new System.Drawing.Point(61, 218);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(100, 20);
             this.textBox1.TabIndex = 52;
@@ -77,7 +79,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.SystemColors.Control;
-            this.label6.Location = new System.Drawing.Point(247, 241);
+            this.label6.Location = new System.Drawing.Point(247, 202);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(86, 13);
             this.label6.TabIndex = 51;
@@ -87,7 +89,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.SystemColors.Control;
-            this.label5.Location = new System.Drawing.Point(399, 241);
+            this.label5.Location = new System.Drawing.Point(399, 202);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(106, 13);
             this.label5.TabIndex = 50;
@@ -117,6 +119,9 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.Control;
+            this.panel1.Controls.Add(this.button2);
+            this.panel1.Controls.Add(this.label9);
+            this.panel1.Controls.Add(this.textBox6);
             this.panel1.Controls.Add(this.comboBox1);
             this.panel1.Controls.Add(this.textBox1);
             this.panel1.Controls.Add(this.textBox4);
@@ -135,6 +140,14 @@
             this.panel1.Size = new System.Drawing.Size(561, 395);
             this.panel1.TabIndex = 47;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(402, 218);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 21);
+            this.comboBox1.TabIndex = 54;
             // 
             // label7
             // 
@@ -184,7 +197,7 @@
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(241, 257);
+            this.textBox3.Location = new System.Drawing.Point(241, 218);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(100, 20);
             this.textBox3.TabIndex = 44;
@@ -201,33 +214,41 @@
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.SystemColors.Control;
-            this.label3.Location = new System.Drawing.Point(58, 241);
+            this.label3.Location = new System.Drawing.Point(58, 202);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(81, 13);
             this.label3.TabIndex = 40;
             this.label3.Text = "Lugar de origen";
             // 
-            // comboBox1
+            // label9
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(402, 257);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 54;
+            this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.SystemColors.Control;
+            this.label9.Location = new System.Drawing.Point(247, 274);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(84, 13);
+            this.label9.TabIndex = 56;
+            this.label9.Text = "Distancia nueva";
+            // 
+            // textBox6
+            // 
+            this.textBox6.Location = new System.Drawing.Point(241, 290);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(100, 20);
+            this.textBox6.TabIndex = 55;
             // 
             // confirmarmodificarrutaForm1
             // 
-            this.Load += new System.EventHandler(this.confirmarmodificarrutaForm1_Load);
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(859, 526);
-            this.Controls.Add(this.button2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.panel1);
             this.Name = "confirmarmodificarrutaForm1";
             this.Text = "confirmarmodificarrutaForm1";
+            this.Load += new System.EventHandler(this.confirmarmodificarrutaForm1_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -254,5 +275,7 @@
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox textBox6;
     }
 }

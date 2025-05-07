@@ -52,18 +52,8 @@ namespace PROYECTO_TRENES.Modulo_Empleado
                 return;
             }
 
-            Ruta rutaEncontrada = null;
-            Nodo<Ruta> actualRuta = Datos.ListaRutas.GetCabeza();
+            Ruta rutaEncontrada = Datos.RedFerroviaria.BuscarRuta(idBuscar);
 
-            while (actualRuta != null)
-            {
-                if (actualRuta.Valor.IdRuta == idBuscar)
-                {
-                    rutaEncontrada = actualRuta.Valor;
-                    break;
-                }
-                actualRuta = actualRuta.Siguiente;
-            }
 
             if (rutaEncontrada != null)
             {
@@ -76,7 +66,8 @@ namespace PROYECTO_TRENES.Modulo_Empleado
                                    $"Destino: {rutaEncontrada.Destino}\r\n" +
                                    $"Fecha Salida: {rutaEncontrada.FechaSalida}\r\n" +
                                    $"Fecha Llegada: {rutaEncontrada.FechaLlegada}\r\n" +
-                                   $"Tren Asociado (ID): {rutaEncontrada.Tren?.Id ?? "N/A"}";
+                                   $"Distancia: {rutaEncontrada.Distancia} km\r\n" +
+                                   $"Tren Asociado (ID): {rutaEncontrada.Tren?.Id ?? "N/A"}\r\n"; 
 
             }
             else
@@ -91,11 +82,10 @@ namespace PROYECTO_TRENES.Modulo_Empleado
         {
             if (this.rutaEncontradaParaModificar != null)
             {
-                confirmarmodificarrutaForm1 confirmarmodificarrutaForm1 = new confirmarmodificarrutaForm1();
-
-                confirmarmodificarrutaForm1.RutaAModificar = this.rutaEncontradaParaModificar;
-
-                confirmarmodificarrutaForm1.Show();
+                confirmarmodificarrutaForm1 confirmacionForm = new confirmarmodificarrutaForm1();
+                confirmacionForm.RutaAModificar = this.rutaEncontradaParaModificar;
+                
+                confirmacionForm.Show();
                 this.Hide();
             }
             else

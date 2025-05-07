@@ -45,6 +45,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -61,6 +63,8 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.Control;
+            this.panel1.Controls.Add(this.textBox6);
+            this.panel1.Controls.Add(this.label9);
             this.panel1.Controls.Add(this.comboBox1);
             this.panel1.Controls.Add(this.textBox1);
             this.panel1.Controls.Add(this.label5);
@@ -84,14 +88,14 @@
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(412, 220);
+            this.comboBox1.Location = new System.Drawing.Point(412, 167);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(151, 21);
             this.comboBox1.TabIndex = 19;
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(70, 220);
+            this.textBox1.Location = new System.Drawing.Point(70, 167);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(100, 20);
             this.textBox1.TabIndex = 18;
@@ -100,7 +104,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(409, 204);
+            this.label5.Location = new System.Drawing.Point(409, 151);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(63, 13);
             this.label5.TabIndex = 17;
@@ -163,7 +167,7 @@
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(242, 220);
+            this.textBox3.Location = new System.Drawing.Point(242, 167);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(100, 20);
             this.textBox3.TabIndex = 10;
@@ -180,7 +184,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(239, 204);
+            this.label6.Location = new System.Drawing.Point(239, 151);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(43, 13);
             this.label6.TabIndex = 7;
@@ -189,7 +193,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(67, 204);
+            this.label3.Location = new System.Drawing.Point(67, 151);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(81, 13);
             this.label3.TabIndex = 6;
@@ -213,6 +217,24 @@
             this.label1.Size = new System.Drawing.Size(410, 20);
             this.label1.TabIndex = 1;
             this.label1.Text = "Diligenciar la siguiente información para agregar una ruta";
+            // 
+            // textBox6
+            // 
+            this.textBox6.Location = new System.Drawing.Point(242, 238);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(100, 20);
+            this.textBox6.TabIndex = 21;
+            this.textBox6.TextChanged += new System.EventHandler(this.textBox6_TextChanged);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(239, 222);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(51, 13);
+            this.label9.TabIndex = 20;
+            this.label9.Text = "Distancia";
+            this.label9.Click += new System.EventHandler(this.label9_Click);
             // 
             // agregarrutaForm1
             // 
@@ -251,5 +273,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.Label label9;
     }
 }

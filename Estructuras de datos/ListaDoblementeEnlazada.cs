@@ -6,16 +6,18 @@ using System.Threading.Tasks;
 
 namespace PROYECTO_TRENES.Estructuras_de_datos
 {
-    public class ListaEnlazada<T>
+    public class ListaDoblementeEnlazada<T>
     {
         private Nodo<T> cabeza;
+        private Nodo<T> cola;
         private int contador;
 
         public int Cantidad { get { return contador; } }
 
-        public ListaEnlazada()
+        public ListaDoblementeEnlazada()
         {
             this.cabeza = null;
+            this.cola = null;
             this.contador = 0;
         }
 
@@ -26,15 +28,13 @@ namespace PROYECTO_TRENES.Estructuras_de_datos
             if (cabeza == null)
             {
                 cabeza = nuevoNodo;
+                cola = nuevoNodo;
             }
             else
             {
-                Nodo<T> actual = cabeza;
-                while (actual.Siguiente != null)
-                {
-                    actual = actual.Siguiente;
-                }
-                actual.Siguiente = nuevoNodo;
+                cola.Siguiente = nuevoNodo;
+                nuevoNodo.Anterior = cola;
+                cola = nuevoNodo;
             }
             contador++;
         }
@@ -42,8 +42,18 @@ namespace PROYECTO_TRENES.Estructuras_de_datos
         public void AgregarAlInicio(T valor)
         {
             Nodo<T> nuevoNodo = new Nodo<T>(valor);
-            nuevoNodo.Siguiente = cabeza;
-            cabeza = nuevoNodo;
+
+            if (cabeza == null)
+            {
+                cabeza = nuevoNodo;
+                cola = nuevoNodo;
+            }
+            else
+            {
+                nuevoNodo.Siguiente = cabeza;
+                cabeza.Anterior = nuevoNodo;
+                cabeza = nuevoNodo;
+            }
             contador++;
         }
 
@@ -71,22 +81,43 @@ namespace PROYECTO_TRENES.Estructuras_de_datos
             if (EqualityComparer<T>.Default.Equals(cabeza.Valor, valor))
             {
                 cabeza = cabeza.Siguiente;
+                if (cabeza != null)
+                {
+                    cabeza.Anterior = null;
+                }
+                else
+                {
+                    cola = null;
+                }
                 contador--;
                 return true;
             }
 
             Nodo<T> actual = cabeza;
-            Nodo<T> anterior = null;
-
             while (actual != null && !EqualityComparer<T>.Default.Equals(actual.Valor, valor))
             {
-                anterior = actual;
                 actual = actual.Siguiente;
             }
 
             if (actual != null)
             {
-                anterior.Siguiente = actual.Siguiente;
+                if (actual.Anterior != null)
+                {
+                    actual.Anterior.Siguiente = actual.Siguiente;
+                }
+
+                if (actual.Siguiente != null)
+                {
+                    actual.Siguiente.Anterior = actual.Anterior;
+                }
+                else
+                {
+                    cola = actual.Anterior;
+                }
+
+                actual.Siguiente = null;
+                actual.Anterior = null;
+
                 contador--;
                 return true;
             }
@@ -112,6 +143,11 @@ namespace PROYECTO_TRENES.Estructuras_de_datos
         public Nodo<T> GetCabeza()
         {
             return cabeza;
+        }
+
+        public Nodo<T> GetCola()
+        {
+            return cola;
         }
     }
 }

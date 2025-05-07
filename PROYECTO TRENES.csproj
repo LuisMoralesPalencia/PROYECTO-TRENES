@@ -47,7 +47,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Códigos\Administrador.cs" />
+    <Compile Include="Códigos\Boleto.cs" />
     <Compile Include="Códigos\Empleado.cs" />
+    <Compile Include="Códigos\Equipaje.cs" />
+    <Compile Include="Códigos\Estacion.cs" />
+    <Compile Include="Códigos\MaquinaVenta.cs" />
     <Compile Include="Códigos\Pasajero.cs" />
     <Compile Include="Códigos\Ruta.cs" />
     <Compile Include="Códigos\SistemaAutenticacion.cs" />
@@ -55,8 +59,9 @@
     <Compile Include="Códigos\Usuario.cs" />
     <Compile Include="Códigos\Vagon.cs" />
     <Compile Include="Datos.cs" />
+    <Compile Include="Estructuras de datos\Grafo.cs" />
     <Compile Include="Estructuras de datos\ListaCircular.cs" />
-    <Compile Include="Estructuras de datos\ListaEnlazada.cs" />
+    <Compile Include="Estructuras de datos\ListaDoblementeEnlazada.cs" />
     <Compile Include="Estructuras de datos\Nodo.cs" />
     <Compile Include="Estructuras de datos\Pila.cs" />
     <Compile Include="Estructuras de datos\TablaHash.cs" />
@@ -83,18 +88,6 @@
     </Compile>
     <Compile Include="Modulo administrador\FormBuscarUsuarios.Designer.cs">
       <DependentUpon>FormBuscarUsuarios.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Modulo administrador\FormEliminar.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Modulo administrador\FormEliminar.Designer.cs">
-      <DependentUpon>FormEliminar.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Modulo administrador\FormEliminarUsuario.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Modulo administrador\FormEliminarUsuario.Designer.cs">
-      <DependentUpon>FormEliminarUsuario.cs</DependentUpon>
     </Compile>
     <Compile Include="Modulo administrador\FormMenuAdministrador.cs">
       <SubType>Form</SubType>
@@ -283,12 +276,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Modulo administrador\FormBuscarUsuarios.resx">
       <DependentUpon>FormBuscarUsuarios.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Modulo administrador\FormEliminar.resx">
-      <DependentUpon>FormEliminar.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Modulo administrador\FormEliminarUsuario.resx">
-      <DependentUpon>FormEliminarUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Modulo administrador\FormMenuAdministrador.resx">
       <DependentUpon>FormMenuAdministrador.cs</DependentUpon>
