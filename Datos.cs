@@ -1,5 +1,5 @@
-﻿using PROYECTO_TRENES.Códigos;
-using PROYECTO_TRENES.Estructuras_de_datos;
+﻿using PROYECTO_TRENES.Estructuras_de_datos;
+using PROYECTO_TRENES.Códigos;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,23 +17,24 @@ namespace PROYECTO_TRENES
         static Datos()
         {
             ListaRutas = new ListaEnlazada<Ruta>();
-            TablaUsuarios = new TablaHash<string, Usuario>(10);
             ListaTrenes = new ListaCircular<Tren>();
+            TablaUsuarios = new TablaHash<string, Usuario>(200); 
 
             TablaUsuarios.InsertarValores(
-                "Camacho",
-                new Administrador("admin", "admin123")
+                "admin",
+                new Administrador("admin", "NombreAdmin", "ApellidoAdmin", "CC", "123456789", "3001112233", "admin123") 
             );
 
             TablaUsuarios.InsertarValores(
-                "Miguel",
-                new Empleado("empleado1", "emp456")
+                "empleado1", 
+                new Empleado("empleado1", "NombreEmpleado", "ApellidoEmpleado", "TI", "987654321", "3104445566", "emp456") 
             );
 
             TablaUsuarios.InsertarValores(
-                "Ren",
-                new Pasajero("pasajero1", "pass789")
+                "pasajero1", 
+                new Pasajero("pasajero1", "NombrePasajero", "ApellidoPasajero", "CC", "101010101", "3207778899", "pass789") 
             );
+
         }
     }
 }

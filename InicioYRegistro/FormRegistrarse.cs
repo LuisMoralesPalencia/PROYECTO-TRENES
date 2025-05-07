@@ -36,28 +36,31 @@ namespace PROYECTO_TRENES.InicioYRegistro
             Application.Exit();
         }
 
-        private void textBoxCorreoRegistro_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBoxContraseñaRegistro_TextChanged(object sender, EventArgs e)
-        {
-
-        }
+        private void textBoxCorreoRegistro_TextChanged(object sender, EventArgs e) { }
+        private void textBoxContraseñaRegistro_TextChanged(object sender, EventArgs e) { }
 
         private void buttonRegistrarse_Click(object sender, EventArgs e)
         {
-            string nombreUsuario = textBoxCorreoRegistro.Text; 
-            string contrasenia = textBoxContraseñaRegistro.Text;
+            string nombreUsuario = textBoxCorreoRegistro.Text.Trim();
+            string contrasenia = textBoxContraseñaRegistro.Text.Trim();
+
+            if (string.IsNullOrWhiteSpace(nombreUsuario) || string.IsNullOrWhiteSpace(contrasenia))
+            {
+                MessageBox.Show("El nombre de usuario y la contraseña son obligatorios para el registro.", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             string rol = "Pasajero";
 
-            bool registroExitoso = sistemaAutenticacion.RegistrarUsuario(nombreUsuario, contrasenia, rol);
+            bool registroExitoso = sistemaAutenticacion.RegistrarUsuario(
+                nombreUsuario,
+                contrasenia,
+                rol
+            );
 
             if (registroExitoso)
             {
                 MessageBox.Show("Usuario registrado exitosamente.", "Registro Exitoso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
                 textBoxCorreoRegistro.Text = "";
                 textBoxContraseñaRegistro.Text = "";
 
@@ -67,15 +70,13 @@ namespace PROYECTO_TRENES.InicioYRegistro
             }
             else
             {
-                MessageBox.Show("Error al registrar usuario. El nombre de usuario ya existe o los datos son inválidos.", "Error de Registro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error al registrar usuario. El nombre de usuario ya existe.", "Error de Registro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
         private void LinkLabelSiTengoCuenta_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            FormInicioSesion formInicioSesion = new FormInicioSesion();
-            formInicioSesion.Show();
-            this.Hide();
+    
         }
     }
 }

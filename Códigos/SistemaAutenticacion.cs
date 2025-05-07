@@ -20,7 +20,7 @@ namespace PROYECTO_TRENES.Códigos
         {
             if (tablaUsuarios.BuscarValores(nombreUsuario) != null)
             {
-                return false;
+                return false; 
             }
 
             Usuario nuevoUsuario = null;
@@ -37,7 +37,7 @@ namespace PROYECTO_TRENES.Códigos
                     nuevoUsuario = new Pasajero(nombreUsuario, contrasenia);
                     break;
                 default:
-                    return false;
+                    return false; 
             }
 
             if (nuevoUsuario != null)
@@ -46,8 +46,9 @@ namespace PROYECTO_TRENES.Códigos
                 return true;
             }
 
-            return false;
+            return false; 
         }
+
 
         public Usuario IniciarSesion(string nombreUsuario, string contrasenia)
         {

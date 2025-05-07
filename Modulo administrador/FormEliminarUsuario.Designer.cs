@@ -33,29 +33,30 @@
             this.label1 = new System.Windows.Forms.Label();
             this.textBoxTipoDeUsuario = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBoxApellidoUsuario = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBoxNombreUsuario = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.buttonCancelar = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.comboBox1);
             this.panel1.Controls.Add(this.buttonConfirmarEliminacion);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.textBoxTipoDeUsuario);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.textBoxApellidoUsuario);
             this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.textBoxNombreUsuario);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.buttonCancelar);
             this.panel1.Enabled = false;
-            this.panel1.Location = new System.Drawing.Point(41, 69);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Location = new System.Drawing.Point(169, 136);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(532, 267);
             this.panel1.TabIndex = 1;
@@ -88,7 +89,7 @@
             // 
             this.textBoxTipoDeUsuario.Enabled = false;
             this.textBoxTipoDeUsuario.Location = new System.Drawing.Point(343, 53);
-            this.textBoxTipoDeUsuario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxTipoDeUsuario.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxTipoDeUsuario.Name = "textBoxTipoDeUsuario";
             this.textBoxTipoDeUsuario.Size = new System.Drawing.Size(161, 20);
             this.textBoxTipoDeUsuario.TabIndex = 95;
@@ -105,33 +106,15 @@
             this.label2.TabIndex = 94;
             this.label2.Text = "Usted esta eliminando un usuario de tipo:";
             // 
-            // textBoxApellidoUsuario
-            // 
-            this.textBoxApellidoUsuario.Location = new System.Drawing.Point(285, 129);
-            this.textBoxApellidoUsuario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.textBoxApellidoUsuario.Name = "textBoxApellidoUsuario";
-            this.textBoxApellidoUsuario.Size = new System.Drawing.Size(161, 20);
-            this.textBoxApellidoUsuario.TabIndex = 81;
-            this.textBoxApellidoUsuario.TextChanged += new System.EventHandler(this.textBoxApellidoUsuario_TextChanged);
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(282, 112);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(61, 13);
+            this.label4.Size = new System.Drawing.Size(124, 13);
             this.label4.TabIndex = 80;
-            this.label4.Text = "Contraseña";
-            // 
-            // textBoxNombreUsuario
-            // 
-            this.textBoxNombreUsuario.Location = new System.Drawing.Point(62, 129);
-            this.textBoxNombreUsuario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.textBoxNombreUsuario.Name = "textBoxNombreUsuario";
-            this.textBoxNombreUsuario.Size = new System.Drawing.Size(161, 20);
-            this.textBoxNombreUsuario.TabIndex = 79;
-            this.textBoxNombreUsuario.TextChanged += new System.EventHandler(this.textBoxNombreUsuario_TextChanged);
+            this.label4.Text = "Número de identificación";
             // 
             // label3
             // 
@@ -150,24 +133,54 @@
             this.buttonCancelar.Name = "buttonCancelar";
             this.buttonCancelar.Size = new System.Drawing.Size(105, 32);
             this.buttonCancelar.TabIndex = 22;
-            this.buttonCancelar.Text = "Cancelar";
+            this.buttonCancelar.Text = "Regresar";
             this.buttonCancelar.UseVisualStyleBackColor = true;
             this.buttonCancelar.Click += new System.EventHandler(this.buttonCancelar_Click);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 24.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(333, 71);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(166, 38);
+            this.label5.TabIndex = 50;
+            this.label5.Text = "TransRail";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(63, 128);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(140, 21);
+            this.comboBox1.TabIndex = 116;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
+            // textBox1
+            // 
+            this.textBox1.Enabled = false;
+            this.textBox1.Location = new System.Drawing.Point(285, 128);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(132, 20);
+            this.textBox1.TabIndex = 117;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // FormEliminarUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(652, 444);
+            this.ClientSize = new System.Drawing.Size(850, 513);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormEliminarUsuario";
             this.Text = "Eliminar usuario";
             this.Load += new System.EventHandler(this.FormEliminarUsuario_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -178,10 +191,11 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBoxTipoDeUsuario;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBoxApellidoUsuario;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBoxNombreUsuario;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button buttonCancelar;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }

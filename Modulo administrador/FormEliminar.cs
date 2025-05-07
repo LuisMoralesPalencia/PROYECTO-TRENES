@@ -12,27 +12,18 @@ using System.Windows.Forms;
 
 namespace PROYECTO_TRENES.Modulo_administrador
 {
-    public partial class FormEliminarUsuario : Form
+    public partial class FormEliminar : Form
     {
-        public FormEliminarUsuario()
+        public FormEliminar()
         {
             InitializeComponent();
         }
 
-        private void FormEliminarUsuario_Load(object sender, EventArgs e)
+        private void FormEliminar_Load(object sender, EventArgs e)
         {
             try
             {
                 CargarUsuariosEnComboBox();
-
-                if (this.Controls.Find("textBoxTipoDeUsuario", true).FirstOrDefault() is TextBox txtTipo)
-                {
-                    txtTipo.ReadOnly = true;
-                }
-                else
-                {
-                    MessageBox.Show("Advertencia: No se encontró el control textBoxTipoDeUsuario para hacerlo de solo lectura.", "Control No Encontrado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                }
 
                 if (this.Controls.Find("textBox1", true).FirstOrDefault() is TextBox txtIdentificacion)
                 {
@@ -41,6 +32,16 @@ namespace PROYECTO_TRENES.Modulo_administrador
                 else
                 {
                     MessageBox.Show("Advertencia: No se encontró el control textBox1 para hacerlo de solo lectura.", "Control No Encontrado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+
+                // *** LÍNEA A CORREGIR #1 ***
+                if (this.Controls.Find("textBoxTipoDeUsuario", true).FirstOrDefault() is TextBox txtTipo) // <-- Cambiar "textBoxTipoDeUsuario" a "textBox2"
+                {
+                    txtTipo.ReadOnly = true;
+                }
+                else
+                {
+                    MessageBox.Show("Advertencia: No se encontró el control textBox2 para hacerlo de solo lectura.", "Control No Encontrado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
             catch (Exception ex)
@@ -79,21 +80,17 @@ namespace PROYECTO_TRENES.Modulo_administrador
             }
         }
 
-        private void textBoxTipoDeUsuario_TextChanged(object sender, EventArgs e)
+
+        private void label4_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void buttonCancelar_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
             FormMenuAdministrador formMenuAdministrador = new FormMenuAdministrador();
             formMenuAdministrador.Show();
             this.Hide();
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -102,29 +99,30 @@ namespace PROYECTO_TRENES.Modulo_administrador
             {
                 if (this.Controls.Find("comboBox1", true).FirstOrDefault() is ComboBox cbUsuarios)
                 {
-                    if (this.Controls.Find("textBoxTipoDeUsuario", true).FirstOrDefault() is TextBox txtTipo)
+                    if (this.Controls.Find("textBox1", true).FirstOrDefault() is TextBox txtIdentificacion)
                     {
-                        if (this.Controls.Find("textBox1", true).FirstOrDefault() is TextBox txtIdentificacion)
+                        // *** LÍNEA A CORREGIR #2 ***
+                        if (this.Controls.Find("textBoxTipoDeUsuario", true).FirstOrDefault() is TextBox txtTipo) // <-- Cambiar "textBoxTipoDeUsuario" a "textBox2"
                         {
                             if (cbUsuarios.SelectedItem is Usuario selectedUser)
                             {
-                                txtTipo.Text = selectedUser.GetType().Name;
                                 txtIdentificacion.Text = selectedUser.NumeroIdentificacion;
+                                txtTipo.Text = selectedUser.GetType().Name;
                             }
                             else
                             {
-                                txtTipo.Text = "";
                                 txtIdentificacion.Text = "";
+                                txtTipo.Text = "";
                             }
                         }
                         else
                         {
-                            MessageBox.Show("Error interno: No se encontró el control textBox1 al seleccionar usuario.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            MessageBox.Show("Error interno: No se encontró el control textBox2 al seleccionar usuario.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
                     }
                     else
                     {
-                        MessageBox.Show("Error interno: No se encontró el control textBoxTipoDeUsuario al seleccionar usuario.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Error interno: No se encontró el control textBox1 al seleccionar usuario.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
             }
@@ -134,13 +132,12 @@ namespace PROYECTO_TRENES.Modulo_administrador
             }
         }
 
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        private void textBox2_TextChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void buttonConfirmarEliminacion_Click(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e) // Este es el boton Confirmar Eliminacion
         {
             try
             {
@@ -150,14 +147,18 @@ namespace PROYECTO_TRENES.Modulo_administrador
                     {
                         string nombreUsuarioClave = usuarioAEliminar.NombreUsuario;
 
-                        Datos.TablaUsuarios.EliminarValores(nombreUsuarioClave);
+                        DialogResult result = MessageBox.Show($"¿Está seguro de que desea eliminar al usuario '{nombreUsuarioClave}'?", "Confirmar Eliminación", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                        if (result == DialogResult.Yes)
+                        {
+                            Datos.TablaUsuarios.EliminarValores(nombreUsuarioClave);
 
-                        MessageBox.Show($"Usuario '{nombreUsuarioClave}' eliminado exitosamente.", "Eliminación Exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            MessageBox.Show($"Usuario '{nombreUsuarioClave}' eliminado exitosamente.", "Eliminación Exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                        CargarUsuariosEnComboBox();
-                        if (this.Controls.Find("textBoxTipoDeUsuario", true).FirstOrDefault() is TextBox txtTipo) txtTipo.Text = "";
-                        if (this.Controls.Find("textBox1", true).FirstOrDefault() is TextBox txtIdentificacion) txtIdentificacion.Text = "";
-
+                            CargarUsuariosEnComboBox();
+                            if (this.Controls.Find("textBox1", true).FirstOrDefault() is TextBox txtIdentificacion) txtIdentificacion.Text = "";
+                            // CORREGIDO: Limpiar "textBox2" en lugar de "textBoxTipoDeUsuario"
+                            if (this.Controls.Find("textBox2", true).FirstOrDefault() is TextBox txtTipo) txtTipo.Text = ""; // <-- Cambiar "textBoxTipoDeUsuario" a "textBox2"
+                        }
                     }
                     else
                     {
@@ -169,6 +170,11 @@ namespace PROYECTO_TRENES.Modulo_administrador
             {
                 MessageBox.Show("Ocurrió un error al intentar eliminar al usuario: " + ex.Message, "Error de Eliminación", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

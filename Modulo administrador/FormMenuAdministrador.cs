@@ -37,7 +37,7 @@ namespace PROYECTO_TRENES.Modulo_administrador
 
         private void buttonAgregarEmpleado_Click(object sender, EventArgs e)
         {
-            FormAgregarEmpleado formAgregarEmpleado = new FormAgregarEmpleado();
+            FormAgregarUsuario formAgregarEmpleado = new FormAgregarUsuario();
             formAgregarEmpleado.Show();
             this.Hide();
         }
@@ -51,8 +51,8 @@ namespace PROYECTO_TRENES.Modulo_administrador
 
         private void button1_Click(object sender, EventArgs e)
         {
-            FormEliminarUsuario formEliminarUsuario = new FormEliminarUsuario();
-            formEliminarUsuario.Show();
+            FormEliminar formEliminar = new FormEliminar();
+            formEliminar.Show();
             this.Hide();
         }
     }
