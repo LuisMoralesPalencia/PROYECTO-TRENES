@@ -48,6 +48,7 @@
   <ItemGroup>
     <Compile Include="Códigos\Administrador.cs" />
     <Compile Include="Códigos\Boleto.cs" />
+    <Compile Include="Códigos\Class1.cs" />
     <Compile Include="Códigos\Empleado.cs" />
     <Compile Include="Códigos\Equipaje.cs" />
     <Compile Include="Códigos\Estacion.cs" />
